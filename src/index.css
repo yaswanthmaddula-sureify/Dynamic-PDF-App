@@ -10,3 +10,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* Navbar container */
+nav {
+  background-color: #fff; /* Navbar background color */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Adjust padding as needed */
+}
+
+/* Navbar links */
+nav a {
+  color: #007bff; /* Link text color */
+  text-decoration: none;
+  padding: 10px 20px; /* Link padding */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Apply styles to the active link based on the current URL */
+nav a.active {
+  color: #fff; /* Active link text color */
+  background-color: #007bff; /* Active link background color */
+}
+
+/* Hover effect for navbar links */
+nav a:hover {
+  background-color: #0056b3; /* Link hover background color */
+  color: #fff; /* Link hover text color */
+}
+
+/* Navbar list */
+nav ul {
+  display: flex;
+  list-style-type: none; /* Remove bullet points */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Navbar list items */
+nav li {
+  margin-right: 10px; /* Adjust margin between list items */
+}
