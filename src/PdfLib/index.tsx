@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 
-function PdfMake() {
+function PdfLib() {
     const [pdfUrl, setPdfUrl] = useState('');
 
     useEffect(() => {
         // Fetch PDF data from the server
-        fetch('https://probable-fiesta-vw7556r5q5qh6qr6-3090.app.github.dev/pdfmake')
-            .then(response => response.blob())
+        fetch('https://probable-fiesta-vw7556r5q5qh6qr6-3090.app.github.dev/pdflib')
+            .then(response => {
+                console.log(response)
+                return response.blob()})
             .then(blob => {
                 // Create a URL for the blob data
                 const url = URL.createObjectURL(blob);
@@ -25,4 +27,4 @@ function PdfMake() {
     </div>)
 }
 
-export default PdfMake;
+export default PdfLib;

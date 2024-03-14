@@ -3,7 +3,7 @@ const planInformation = [
     ['Product Name', ''],
     ['Coverage Amount', ''],
     ['Premium Amount', ''],
-    ['Premium Mode', { text: '\u2610 Single-Pay   Monthly   Quarterly   Semi-Annual   Annual' }],
+    ['Premium Mode', { text: '\u2611 Single-Pay   Monthly   Quarterly   Semi-Annual   Annual' }],
     ['Paid by',
         {
             text: [
@@ -102,8 +102,80 @@ const impNotices = [
     }]
 ];
 
+const agreementSignatures = [
+    ['Agreement and Signatures'],
+    [{
+        stack: [
+            { text: 'Agreement: I understand and agree that:', bold: true, margin: [0, 4, 0, 0] },
+            {
+                ul: [
+                    'This application, any amendments to it, and any related medical examination(s) will become a part of the Policy and are the basis of any insurance issued upon this application. ',
+                    'The Proposed Insured or Owner has a right to cancel this application at any time by contacting their Financial Professional or Nationwide Life and Annuity Insurance Company (“Nationwide”) in writing. No Financial Professional, medical examiner or other representative of Nationwide may accept risks or make or change any contract; or waive or change any of the Company’s rights or requirements.',
+                    ''
+                ]
+            },
+            {
+                text: '\n I have read this application and agreement and declare that the answers are true and complete to the best of my knowledge and belief. I understand and agree to all its terms.'
+            },
+            {
+                text: '\n\n'
+            },
+            {
+                text: 'Signed at_____________________________, on__________________________________'
+            },
+            {
+                text: '                                State                                                 Date \n\n',
+                preserveLeadingSpaces: true
+            },
+            {
+                text: 'X_______________________________  X___________________________________________________'
+            },
+            {
+                text: '         Signature of Proposed Insured            Signature of Owner (if other than Proposed Insured)',
+                preserveLeadingSpaces: true
+            }
+        ]
+    }]
+];
+
+const content = [
+    // { text: 'Page 1 Content', fontSize: 20, pageBreak: 'after' },
+    {
+        margin: [0, 0, 0, 5],
+        columns: [
+            {
+                image: 'images/Nationwide-logo.png', // Replace 'logo.png' with the path to your logo image
+                width: 155 // Adjust the width of the logo as needed
+            },
+            {
+                stack: [
+                    { text: 'Application for Individual Life Insurance', fontSize: 14 },
+                    { text: 'Nationwide Life & Annuity Insurance Company', fontSize: 14 },
+                    { text: 'PO Box 182835, Columbus, OH 43218-2835', fontSize: 10, margin: [0, 5, 0, 0] },
+                    { text: 'Fax: 1-888-677-7393 • www.nationwide.com', fontSize: 10 }
+                ],
+                alignment: 'right',
+                margin: [0, 10, 0, 0] // Adjust top margin as needed
+            }
+        ],
+        pageBreak: 'before'
+    }
+];
+
+// Define number of pages and duplicate data
+const numPages = 20;
+const repeatedContent = Array(numPages).fill(content);
+
 
 export const docDefinition = {
+    footer: (currentPage, pageCount) => ({
+        margin: [38, 4, 38, 0],
+        columns: [
+            'ICC24-LAAA-0138',
+            { text: `${currentPage.toString()} of ${pageCount}`, alignment: 'center' },
+            { text: '(01/2024)', alignment: 'right' }
+        ]
+    }),
     content: [
         {
             margin: [0, 0, 0, 5],
@@ -158,13 +230,29 @@ export const docDefinition = {
             layout: 'filledHeaderWithBorders'
         },
         {
+            margin: [0, 0, 0, 20],
+            table: {
+                headerRows: 1,
+                widths: ['*'],
+                body: [
+                    ...agreementSignatures
+                ]
+            },
+            layout: 'filledHeaderWithBorders'
+        },
+        {
             text: [
-                'This is a blank line:',
-                { text: '\n\n', lineHeight: 1 }, // Add blank line with line break
-                'Fill in your information here:'
+                { text: 'There will be a blank line after this. But if i add more text like this then lets see the wrapping ' },
+                { text: '_______________' },
+                { text: 'Signature here', relativePosition: { x: 0, y: 0 } },
+                { text: 'and this should be after the blank line.' },
             ],
             margin: [0, 0, 0, 10] // Add bottom margin to create space between text
-        }
+        },
+       ...repeatedContent.flatMap(pageContent => [
+            // { text: 'Header', fontSize: 24, margin: [0, 0, 0, 20] }, // Example header on each page
+            ...pageContent
+        ])
     ],
     defaultStyle: {
         font: 'Tahoma',

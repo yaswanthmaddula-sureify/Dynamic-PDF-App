@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 
-function PdfMake() {
+function JSPdf() {
     const [pdfUrl, setPdfUrl] = useState('');
 
     useEffect(() => {
         // Fetch PDF data from the server
-        fetch('https://probable-fiesta-vw7556r5q5qh6qr6-3090.app.github.dev/pdfmake')
+        fetch('https://probable-fiesta-vw7556r5q5qh6qr6-3090.app.github.dev/jspdf')
             .then(response => response.blob())
             .then(blob => {
                 // Create a URL for the blob data
                 const url = URL.createObjectURL(blob);
+                console.log(url)
                 // Set the PDF URL in the state
                 setPdfUrl(url);
             })
@@ -25,4 +26,4 @@ function PdfMake() {
     </div>)
 }
 
-export default PdfMake;
+export default JSPdf;

@@ -1,7 +1,9 @@
 import { Routes, Route, Outlet, Link, useLocation } from "react-router-dom";
 import PdfMake from "./PdfMake";
+import PdfLib from "./PdfLib";
+import JSPdf from "./JSPdf";
 
-const routes = [{ label: 'Home', path: '/' }, { label: 'PDF Make', path: '/pdfmake' }, { label: 'PDF Lib', path: '/pdflib' }]
+const routes = [{ label: 'Home', path: '/' }, { label: 'PDF Make', path: '/pdfmake' }, { label: 'PDF Lib', path: '/pdflib' }, { label: 'JS PDF', path: '/jspdf' }]
 
 export default function App() {
   return (
@@ -14,8 +16,8 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="pdfmake" element={<PdfMake />} />
-          <Route path="pdflib" element={<Dashboard />} />
-
+          <Route path="pdflib" element={<PdfLib />} />
+          <Route path="jspdf" element={<JSPdf />} />
           {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
                 routes for. */}

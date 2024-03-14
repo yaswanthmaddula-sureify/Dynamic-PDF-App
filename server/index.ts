@@ -1,4 +1,7 @@
 import { getPdfDoc } from "./pdfmake";
+import { getPdfLibDoc } from "./pdflib";
+import { getJSPdfDoc } from "./jspdf";
+
 
 // Import necessary modules
 const express = require('express');
@@ -13,37 +16,53 @@ app.use(cors())
 // Define a route to generate a PDF
 app.get('/pdfmake', (req, res) => {
 
-    // const fileName = 'download.pdf';
-
-    // // Create a document definition for the PDF
-    // const docDefinition = {
-    //     content: [
-    //         { text: 'Hello, World!', fontSize: 24 }
-    //     ]
-    // };
-
-    // // Define font files
-    // const fonts = {
-    //     Roboto: {
-    //         normal: 'fonts/Roboto/Roboto-Regular.ttf',
-    //         bold: 'fonts/Roboto/Roboto-Medium.ttf',
-    //         italics: 'fonts/Roboto/Roboto-Italic.ttf',
-    //         bolditalics: 'fonts/Roboto/Roboto-MediumItalic.ttf'
-    //     }
-    // };
-    // const pdfPrinter = new pdfMake(fonts);
-
     // Create a PDF
     const pdfDoc = getPdfDoc();
 
     // Make sure the browser knows this is a PDF.
     res.set('Content-Type', 'application/pdf');
-    // res.set('Content-Disposition', `attachment; filename=${fileName}`);
+    res.set('Content-Disposition', `attachment; filename=sample.pdf`);
     res.set('Content-Description: File Transfer');
     res.set('Cache-Control: no-cache');
 
     pdfDoc.pipe(res);
     pdfDoc.end();
+});
+
+app.get('/pdflib', async (req, res) => {
+    try {
+        // Generate the PDF document
+        const pdfDoc = await getPdfLibDoc();
+
+        // Set response headers
+        res.setHeader('Content-Type', 'application/pdf');
+        res.setHeader('Content-Disposition', 'attachment; filename=table.pdf');
+        res.set('Content-Description: File Transfer');
+
+        // Send the PDF as a download
+        res.send(pdfDoc);
+    } catch (error) {
+        console.error('Error generating PDF:', error);
+        res.status(500).send('Error generating PDF');
+    }
+});
+
+app.get('/jspdf', (req, res) => {
+    try {
+        // Generate the PDF document
+        const pdfDoc = getJSPdfDoc();
+
+        // Set response headers
+        res.setHeader('Content-Type', 'application/pdf');
+        res.setHeader('Content-Disposition', 'attachment; filename=table.pdf');
+        res.set('Content-Description: File Transfer');
+
+        // Send the PDF as a download
+        res.send(pdfDoc);
+    } catch (error) {
+        console.error('Error generating PDF:', error);
+        res.status(500).send('Error generating PDF');
+    }
 });
 
 // Start the server
