@@ -1,21 +1,19 @@
----
-title: Basics
-toc: false
-order: 1
----
 
-# Basic Example
 
-This example demonstrates some of the basic features of React Router, including:
+# How to start the app
 
-- Layouts and nested `<Route>`s
-- Index `<Route>`s
-- Catch-all `<Route>`s
-- Using `<Outlet>` as a placeholder for child routes
-- Using `<Link>`s for navigation
+- Install the node modules 
 
-## Preview
+    ```javascript
+     npm install
+    ```
+- Start the frontend vite app
 
-Open this example on [StackBlitz](https://stackblitz.com):
+    ```javascript
+     npm run dev
+    ```
+- Start the nodejs server
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router/tree/main/examples/basic?file=src/App.tsx)
+    ```javascript
+     npm run server
+    ```
