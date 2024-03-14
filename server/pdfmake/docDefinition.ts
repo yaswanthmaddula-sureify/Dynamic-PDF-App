@@ -1,19 +1,24 @@
+import { TDocumentDefinitions } from "pdfmake/interfaces";
+
+const checkedIcon = { text: '', style: 'icon' };
+const unCheckedIcon = { text: '', style: 'icon' };
+
 const planInformation = [
     [{ text: 'Plan Information', colSpan: 2, style: 'tableHeader' }, ''],
     ['Product Name', ''],
     ['Coverage Amount', ''],
     ['Premium Amount', ''],
-    ['Premium Mode', { text: '\u2611 Single-Pay   Monthly   Quarterly   Semi-Annual   Annual' }],
+    ['Premium Mode', { text: [unCheckedIcon, ' Single-Pay  ', unCheckedIcon, ' Monthly  ', unCheckedIcon, ' Quarterly  ', checkedIcon, ' Semi-Annual  ', unCheckedIcon, ' Annual'] }],
     ['Paid by',
         {
             text: [
-                { text: '\u2610 Single-Pay  ', noWrap: false },
-                { text: '\u2610 Single-Pay  ', noWrap: false },
-                { text: '\u2610 Single-Pay  ', noWrap: false },
-                { text: '\u2610 Single-Pay  ', noWrap: false },
-                { text: '\u2610 Single-Pay  ', noWrap: false },
-                { text: '\u2610 Single-Pay  ', noWrap: false },
-                { text: '\u2610 Single-Pay  ', noWrap: false }
+                { text: [checkedIcon, ' Single-Pay  '], noWrap: false },
+                { text: [unCheckedIcon, ' Single-Pay  '], noWrap: false },
+                { text: [unCheckedIcon, ' Single-Pay  '], noWrap: false },
+                { text: [unCheckedIcon, ' Single-Pay  '], noWrap: false },
+                { text: [unCheckedIcon, ' Single-Pay  '], noWrap: false },
+                { text: [unCheckedIcon, ' Single-Pay  '], noWrap: false },
+                { text: [unCheckedIcon, ' Single-Pay  '], noWrap: false }
             ]
         }
     ],
@@ -32,8 +37,8 @@ const personalAndMedicalHistory = [
                 margin: [0, 5, 0, 0],
                 type: 'none',
                 ul: [
-                    ' Within the last 12 months   1–2 years ago   2-3 years ago',
-                    ' 3-5 years ago   More than 5 years ago   Never used'
+                    { text: [unCheckedIcon, ' Within the last 12 months   ', checkedIcon, ' 1–2 years ago   ', unCheckedIcon, ' 2-3 years ago'] },
+                    { text: [unCheckedIcon, ' 3-5 years ago   ', unCheckedIcon, ' More than 5 years ago   ', unCheckedIcon, ' Never used'] }
                 ]
             },
             {
@@ -44,12 +49,12 @@ const personalAndMedicalHistory = [
                 margin: [0, 5, 0, 0],
                 type: 'none',
                 ul: [
-                    " Revoked driver's license",
-                    " Suspended driver's license",
-                    " Plead guilty to or been convicted of reckless driving",
-                    " Plead guilty to or convicted of driving while intoxicated with drugs or alcohol",
-                    " Plead guilty to or convicted of driving under the influence of any drug or alcohol",
-                    " None of the above"
+                    { text: [checkedIcon, " Revoked driver's license"] },
+                    { text: [unCheckedIcon, " Suspended driver's license"] },
+                    { text: [unCheckedIcon, " Plead guilty to or been convicted of reckless driving"] },
+                    { text: [unCheckedIcon, " Plead guilty to or convicted of driving while intoxicated with drugs or alcohol"] },
+                    { text: [unCheckedIcon, " Plead guilty to or convicted of driving under the influence of any drug or alcohol"] },
+                    { text: [unCheckedIcon, " None of the above"] },
                 ]
             },
             {
@@ -60,13 +65,13 @@ const personalAndMedicalHistory = [
                 margin: [0, 5, 0, 0],
                 type: 'none',
                 ul: [
-                    " Amyotrophic Lateral Sclerosis (ALS)",
-                    " Parkinson’s Disease ",
-                    " Multiple Sclerosis",
-                    " Muscular Dystrophy",
-                    " Alzheimer’s disease",
-                    " Dementia",
-                    " None of the above"
+                    { text: [unCheckedIcon, " Amyotrophic Lateral Sclerosis (ALS)"] },
+                    { text: [checkedIcon, " Parkinson’s Disease "] },
+                    { text: [unCheckedIcon, " Multiple Sclerosis"] },
+                    { text: [unCheckedIcon, " Muscular Dystrophy"] },
+                    { text: [unCheckedIcon, " Alzheimer’s disease"] },
+                    { text: [unCheckedIcon, " Dementia"] },
+                    { text: [unCheckedIcon, " None of the above"] }
                 ]
             },
         ],
@@ -167,7 +172,7 @@ const numPages = 20;
 const repeatedContent = Array(numPages).fill(content);
 
 
-export const docDefinition = {
+export const docDefinition: TDocumentDefinitions = {
     footer: (currentPage, pageCount) => ({
         margin: [38, 4, 38, 0],
         columns: [
@@ -249,18 +254,19 @@ export const docDefinition = {
             ],
             margin: [0, 0, 0, 10] // Add bottom margin to create space between text
         },
-       ...repeatedContent.flatMap(pageContent => [
+        ...repeatedContent.flatMap(pageContent => [
             // { text: 'Header', fontSize: 24, margin: [0, 0, 0, 20] }, // Example header on each page
             ...pageContent
         ])
     ],
     defaultStyle: {
-        font: 'Tahoma',
+        // font: 'Tahoma',
         fontSize: 10
     },
     styles: {
         tableHeader: {
             bold: true,
-        }
+        },
+        icon: { font: 'Fontello' }
     }
 };

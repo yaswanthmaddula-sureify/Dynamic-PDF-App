@@ -1,6 +1,7 @@
 import { docDefinition } from "./docDefinition";
 import { customTableLayouts } from "./tableLayouts";
-const pdfMake = require('pdfmake');
+import PdfPrinter from "pdfmake";
+
 
 export const getPdfDoc = () => {
     const fileName = 'download.pdf';
@@ -18,10 +19,19 @@ export const getPdfDoc = () => {
             bold: 'fonts/Tahoma/tahoma.ttf',
             italics: 'fonts/Tahoma/tahoma.ttf',
             bolditalics: 'fonts/Tahoma/tahoma.ttf'
+        },
+        Fontello: {
+            normal: 'fonts/Fontello/fontello.ttf',
+            bold: 'fonts/Fontello/fontello.ttf',
+            italics: 'fonts/Fontello/fontello.ttf',
+            bolditalics: 'fonts/Fontello/fontello.ttf'
         }
     };
-    const pdfPrinter = new pdfMake(fonts);
+
+    const pdfPrinter = new PdfPrinter(fonts);
+
+
 
     // Create a PDF
-    return pdfPrinter.createPdfKitDocument(docDefinition, { tableLayouts: customTableLayouts});
+    return pdfPrinter.createPdfKitDocument(docDefinition, { tableLayouts: customTableLayouts });
 }
