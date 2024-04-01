@@ -1,0 +1,2983 @@
+{
+  "other_params": {
+    "current_status": "questions",
+    "prev_button_state": "questions",
+    "is_prev_btn_hidden": true
+  },
+  "google_places_config_data": {
+    "google_address_prefill": true,
+    "route": [],
+    "address_fields_mapping_data": [],
+    "state_mapping_data": []
+  },
+  "breadcrumbs": [
+    {
+      "breadcrumb_id": "bf075966-7957-4d1b-86ed-93e2b6a7c72b",
+      "section_id": "2402",
+      "product_id": "640",
+      "title": "Product Information",
+      "state": "completed",
+      "source_id": 1,
+      "img_url": "https://acqcdn.s3.amazonaws.com/breadcrumb/breadcrumb/bf075966-7957-4d1b-86ed-93e2b6a7c72b.svg",
+      "active_img_url": "https://acqcdn.s3.amazonaws.com/breadcrumb/breadcrumb/active_bf075966-7957-4d1b-86ed-93e2b6a7c72b.svg",
+      "inactive_img_url": "https://acqcdn.s3.amazonaws.com/breadcrumb/breadcrumb/inactive_bf075966-7957-4d1b-86ed-93e2b6a7c72b.svg",
+      "type": "700006",
+      "show": true,
+      "clickable": true,
+      "groups": [
+        {
+          "group_id": "012e7e88-64d9-4474-a8ba-c91beeeb3207",
+          "group_text": "Select Required Product"
+        },
+        {
+          "group_id": "44e1ef37-e318-4b60-b09c-8fac455600b4",
+          "group_text": "Client Communication Preferences"
+        }
+      ]
+    },
+    {
+      "breadcrumb_id": "76fe7715-74a2-4c08-8edb-3531effa9f2f",
+      "section_id": "2402",
+      "product_id": "640",
+      "title": "Whole Life",
+      "state": "active",
+      "source_id": 1,
+      "img_url": "https://acqcdn.s3.amazonaws.com/breadcrumb/breadcrumb/76fe7715-74a2-4c08-8edb-3531effa9f2f.svg",
+      "active_img_url": "https://acqcdn.s3.amazonaws.com/breadcrumb/breadcrumb/active_76fe7715-74a2-4c08-8edb-3531effa9f2f.svg",
+      "inactive_img_url": "https://acqcdn.s3.amazonaws.com/breadcrumb/breadcrumb/inactive_76fe7715-74a2-4c08-8edb-3531effa9f2f.svg",
+      "type": "700006",
+      "show": true,
+      "clickable": true,
+      "groups": [
+        {
+          "group_id": "81584343-7781-4418-9b6a-ed8fc6a63dd4",
+          "group_text": "Coverage Information"
+        },
+        {
+          "group_id": "0b5f14fc-0e37-439f-8480-f8b14840eb4d",
+          "group_text": "Riders"
+        }
+      ]
+    },
+    {
+      "breadcrumb_id": "fda6faca-5d12-4bca-ae91-62c0b6f2b78c",
+      "section_id": "2402",
+      "product_id": "640",
+      "title": "Term Life",
+      "state": "incomplete",
+      "source_id": 1,
+      "img_url": "https://acqcdn.s3.amazonaws.com/breadcrumb/breadcrumb/fda6faca-5d12-4bca-ae91-62c0b6f2b78c.svg",
+      "active_img_url": "https://acqcdn.s3.amazonaws.com/breadcrumb/breadcrumb/active_fda6faca-5d12-4bca-ae91-62c0b6f2b78c.svg",
+      "inactive_img_url": "https://acqcdn.s3.amazonaws.com/breadcrumb/breadcrumb/inactive_fda6faca-5d12-4bca-ae91-62c0b6f2b78c.svg",
+      "type": "700006",
+      "show": true,
+      "clickable": false,
+      "groups": [
+        {
+          "group_id": "2ba5d803-5eb2-438a-abf6-98cda05c6ad6",
+          "group_text": "Coverage Information"
+        },
+        {
+          "group_id": "08bb53d5-5a24-44d9-8161-759f80b66496",
+          "group_text": "Riders Term"
+        }
+      ]
+    }
+  ],
+  "data": {
+    "questionnaire": {
+      "page_sequence_number": 1,
+      "questions": [
+        {
+          "question_id": "bf075966-7957-4d1b-86ed-93e2b6a7c72b",
+          "question_type": "group",
+          "display_type": "breadcrumb",
+          "display_immediately": false,
+          "orientation": "",
+          "question_text": "Product Information",
+          "index": 1,
+          "response": "",
+          "sequence_number": 1,
+          "is_reviewable": true,
+          "is_editable": true,
+          "is_edit_icon_visible": false,
+          "is_hidden": false,
+          "presentation_type": "",
+          "validations": [],
+          "response_options": [],
+          "parent_question_answer": [],
+          "child_questions": false,
+          "child_questions_on": [],
+          "question_status": "",
+          "question_status_message": "",
+          "hint_text": "",
+          "properties": {
+            "display_properties": {
+              "element_layout": "default",
+              "group_layout": "",
+              "new_row": 0
+            }
+          },
+          "sureify_meta": {
+            "source_id": 1
+          },
+          "show_always": false,
+          "is_readonly": false,
+          "questions": [
+            {
+              "question_id": "012e7e88-64d9-4474-a8ba-c91beeeb3207",
+              "question_type": "group",
+              "display_type": "questions_group",
+              "display_immediately": false,
+              "orientation": "",
+              "question_text": "Select Required Product",
+              "index": 1,
+              "response": "",
+              "sequence_number": 1,
+              "is_reviewable": true,
+              "is_editable": true,
+              "is_edit_icon_visible": false,
+              "is_hidden": false,
+              "presentation_type": "",
+              "validations": [],
+              "response_options": [],
+              "parent_question_answer": [],
+              "child_questions": false,
+              "child_questions_on": [],
+              "question_status": "valid",
+              "question_status_message": "",
+              "hint_text": "",
+              "properties": {
+                "display_properties": {
+                  "group_layout": "single",
+                  "element_layout": "",
+                  "new_row": 0
+                }
+              },
+              "sureify_meta": {
+                "source_id": 1
+              },
+              "show_always": false,
+              "question_subtitle": "",
+              "is_readonly": false,
+              "questions": [
+                {
+                  "question_id": "b364a7a4-e7e1-47c6-896a-ea4a9b3ed683",
+                  "question_type": "multiselection",
+                  "display_type": "checkbox",
+                  "display_immediately": false,
+                  "orientation": "columns",
+                  "question_text": "Please select the product you are looking for:",
+                  "index": 1,
+                  "response": [
+                    {
+                      "label": "Custom Whole Life",
+                      "id": "f60a3da4-f46f-4182-a556-e881f7f32eae"
+                    },
+                    {
+                      "label": "Yearly Renewable Term (YRT)",
+                      "id": "749123b2-d120-4dcb-8a19-32225d824e45"
+                    }
+                  ],
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": {
+                    "required": {
+                      "value": true,
+                      "error_message": "field is required"
+                    }
+                  },
+                  "response_options": [
+                    {
+                      "label": "Whole Life",
+                      "id": "c9bd43ea-ff24-4824-b50d-8d36e5697bdd"
+                    },
+                    {
+                      "label": "Custom Whole Life",
+                      "id": "f60a3da4-f46f-4182-a556-e881f7f32eae"
+                    },
+                    {
+                      "label": "Yearly Renewable Term (YRT)",
+                      "id": "749123b2-d120-4dcb-8a19-32225d824e45"
+                    },
+                    {
+                      "label": "Level Term (LT)",
+                      "id": "ed3b93cb-9bbd-43d0-bd6b-e7928619de15"
+                    },
+                    {
+                      "label": "IDI",
+                      "id": "822637e3-36da-400d-b351-355cb1cafdcd"
+                    }
+                  ],
+                  "parent_question_answer": [],
+                  "child_questions": true,
+                  "child_questions_on": [
+                    "749123b2-d120-4dcb-8a19-32225d824e45",
+                    "ed3b93cb-9bbd-43d0-bd6b-e7928619de15",
+                    "c9bd43ea-ff24-4824-b50d-8d36e5697bdd",
+                    "f60a3da4-f46f-4182-a556-e881f7f32eae",
+                    "822637e3-36da-400d-b351-355cb1cafdcd"
+                  ],
+                  "question_status": "valid",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "default_response": [
+                    {
+                      "label": "Custom Whole Life",
+                      "id": "f60a3da4-f46f-4182-a556-e881f7f32eae"
+                    },
+                    {
+                      "label": "Yearly Renewable Term (YRT)",
+                      "id": "749123b2-d120-4dcb-8a19-32225d824e45"
+                    }
+                  ],
+                  "questions": [],
+                  "sureify_id": "productID"
+                },
+                {
+                  "question_id": "19c9918b-353e-4c1f-961c-c783efb4bc63",
+                  "question_type": "singleselection",
+                  "display_type": "dropdown",
+                  "display_immediately": false,
+                  "orientation": "",
+                  "question_text": "State",
+                  "index": 1,
+                  "response": {
+                    "label": "Arizona",
+                    "id": "Arizona"
+                  },
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": {
+                    "required": {
+                      "value": true,
+                      "error_message": "field is required"
+                    }
+                  },
+                  "response_options": [
+                    {
+                      "label": "Michigan",
+                      "id": "Michigan"
+                    },
+                    {
+                      "label": "Alabama",
+                      "id": "Alabama"
+                    },
+                    {
+                      "label": "Alaska",
+                      "id": "Alaska"
+                    },
+                    {
+                      "label": "Arizona",
+                      "id": "Arizona"
+                    },
+                    {
+                      "label": "Arkansas",
+                      "id": "Arkansas"
+                    },
+                    {
+                      "label": "California",
+                      "id": "California"
+                    },
+                    {
+                      "label": "Colorado",
+                      "id": "Colorado"
+                    },
+                    {
+                      "label": "Connecticut",
+                      "id": "Connecticut"
+                    },
+                    {
+                      "label": "Delaware",
+                      "id": "Delaware"
+                    },
+                    {
+                      "label": "District of Columbia",
+                      "id": "District of Columbia"
+                    },
+                    {
+                      "label": "Florida",
+                      "id": "Florida"
+                    },
+                    {
+                      "label": "Georgia",
+                      "id": "Georgia"
+                    },
+                    {
+                      "label": "Massachusetts",
+                      "id": "Massachusetts"
+                    },
+                    {
+                      "label": "Hawaii",
+                      "id": "Hawaii"
+                    },
+                    {
+                      "label": "Maryland",
+                      "id": "Maryland"
+                    },
+                    {
+                      "label": "Idaho",
+                      "id": "Idaho"
+                    },
+                    {
+                      "label": "Illinois",
+                      "id": "Illinois"
+                    },
+                    {
+                      "label": "Indiana",
+                      "id": "Indiana"
+                    },
+                    {
+                      "label": "Iowa",
+                      "id": "Iowa"
+                    },
+                    {
+                      "label": "Kansas",
+                      "id": "Kansas"
+                    },
+                    {
+                      "label": "Kentucky",
+                      "id": "Kentucky"
+                    },
+                    {
+                      "label": "Louisiana",
+                      "id": "Louisiana"
+                    },
+                    {
+                      "label": "Maine",
+                      "id": "Maine"
+                    },
+                    {
+                      "label": "Minnesota",
+                      "id": "Minnesota"
+                    },
+                    {
+                      "label": "Mississippi",
+                      "id": "Mississippi"
+                    },
+                    {
+                      "label": "Missouri",
+                      "id": "Missouri"
+                    },
+                    {
+                      "label": "Montana",
+                      "id": "Montana"
+                    },
+                    {
+                      "label": "Nebraska",
+                      "id": "Nebraska"
+                    },
+                    {
+                      "label": "Nevada",
+                      "id": "Nevada"
+                    },
+                    {
+                      "label": "New Hampshire",
+                      "id": "New Hampshire"
+                    },
+                    {
+                      "label": "New Jersey",
+                      "id": "New Jersey"
+                    },
+                    {
+                      "label": "New Mexico",
+                      "id": "New Mexico"
+                    },
+                    {
+                      "label": "New York",
+                      "id": "New York"
+                    },
+                    {
+                      "label": "North Carolina",
+                      "id": "North Carolina"
+                    },
+                    {
+                      "label": "North Dakota",
+                      "id": "North Dakota"
+                    },
+                    {
+                      "label": "Ohio",
+                      "id": "Ohio"
+                    },
+                    {
+                      "label": "Oklahoma",
+                      "id": "Oklahoma"
+                    },
+                    {
+                      "label": "Oregon",
+                      "id": "Oregon"
+                    },
+                    {
+                      "label": "Pennsylvania",
+                      "id": "Pennsylvania"
+                    },
+                    {
+                      "label": "Rhode Island",
+                      "id": "Rhode Island"
+                    },
+                    {
+                      "label": "South Carolina",
+                      "id": "South Carolina"
+                    },
+                    {
+                      "label": "South Dakota",
+                      "id": "South Dakota"
+                    },
+                    {
+                      "label": "Tennessee",
+                      "id": "Tennessee"
+                    },
+                    {
+                      "label": "Texas",
+                      "id": "Texas"
+                    },
+                    {
+                      "label": "Utah",
+                      "id": "Utah"
+                    },
+                    {
+                      "label": "Vermont",
+                      "id": "Vermont"
+                    },
+                    {
+                      "label": "Virginia",
+                      "id": "Virginia"
+                    },
+                    {
+                      "label": "Washington",
+                      "id": "Washington"
+                    },
+                    {
+                      "label": "West Virginia",
+                      "id": "West Virginia"
+                    },
+                    {
+                      "label": "Wisconsin",
+                      "id": "Wisconsin"
+                    },
+                    {
+                      "label": "Wyoming",
+                      "id": "Wyoming"
+                    }
+                  ],
+                  "parent_question_answer": [],
+                  "child_questions": false,
+                  "child_questions_on": [],
+                  "question_status": "valid",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "default_response": {
+                    "label": "Alabama",
+                    "id": "Alabama"
+                  },
+                  "questions": [],
+                  "sureify_id": "Jurisdiction"
+                }
+              ],
+              "sureify_id": "",
+              "submission_complete": true
+            },
+            {
+              "question_id": "44e1ef37-e318-4b60-b09c-8fac455600b4",
+              "question_type": "group",
+              "display_type": "questions_group",
+              "display_immediately": false,
+              "orientation": "",
+              "question_text": "Client Communication Preferences",
+              "index": 1,
+              "response": "",
+              "sequence_number": 1,
+              "is_reviewable": true,
+              "is_editable": true,
+              "is_edit_icon_visible": false,
+              "is_hidden": false,
+              "presentation_type": "",
+              "validations": [],
+              "response_options": [],
+              "parent_question_answer": [],
+              "child_questions": false,
+              "child_questions_on": [],
+              "question_status": "valid",
+              "question_status_message": "",
+              "hint_text": "",
+              "properties": {
+                "display_properties": {
+                  "group_layout": "double",
+                  "element_layout": "",
+                  "new_row": 0
+                }
+              },
+              "sureify_meta": {
+                "source_id": 1
+              },
+              "show_always": false,
+              "question_subtitle": "",
+              "is_readonly": false,
+              "questions": [
+                {
+                  "question_id": "46b49e24-7579-4be5-bd1a-b58a18ae9911",
+                  "question_type": "singleselection",
+                  "display_type": "dropdown",
+                  "display_immediately": false,
+                  "orientation": "",
+                  "question_text": "Preferred Communication Method",
+                  "index": 1,
+                  "response": {
+                    "label": "Email",
+                    "id": "6c98a92b-f6f7-47d5-acb7-15f75fe2f1cd"
+                  },
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": {
+                    "required": {
+                      "value": true,
+                      "error_message": "field is required"
+                    }
+                  },
+                  "response_options": [
+                    {
+                      "label": "Email",
+                      "id": "6c98a92b-f6f7-47d5-acb7-15f75fe2f1cd"
+                    },
+                    {
+                      "label": "SMS",
+                      "id": "cd183f1c-e163-4248-a5d2-5f12ec2f57b9"
+                    },
+                    {
+                      "label": "Phone",
+                      "id": "c8e2e7b9-3a4b-4e94-b105-cd6722a8fb4b"
+                    }
+                  ],
+                  "parent_question_answer": [],
+                  "child_questions": false,
+                  "child_questions_on": [],
+                  "question_status": "valid",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                },
+                {
+                  "question_id": "b0a08544-3394-4fee-996f-29f1545a282a",
+                  "question_type": "singleselection",
+                  "display_type": "dropdown",
+                  "display_immediately": false,
+                  "orientation": "",
+                  "question_text": "Preferred communication frequency:",
+                  "index": 1,
+                  "response": {
+                    "label": "Daily",
+                    "id": "5c0f87bd-ad26-45bc-80b8-dd1aa7852552"
+                  },
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": {
+                    "required": {
+                      "value": true,
+                      "error_message": "field is required"
+                    }
+                  },
+                  "response_options": [
+                    {
+                      "label": "Daily",
+                      "id": "5c0f87bd-ad26-45bc-80b8-dd1aa7852552"
+                    },
+                    {
+                      "label": "Weekly",
+                      "id": "80d332e9-8c9a-432a-b41a-48a25021b1ac"
+                    },
+                    {
+                      "label": "Monthly",
+                      "id": "bb597355-c2c2-4925-a433-87d5be6ee6fd"
+                    }
+                  ],
+                  "parent_question_answer": [],
+                  "child_questions": false,
+                  "child_questions_on": [],
+                  "question_status": "valid",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                },
+                {
+                  "question_id": "b29f5981-94af-434a-9321-ace859d88646",
+                  "question_type": "singleselection",
+                  "display_type": "radio",
+                  "display_immediately": false,
+                  "orientation": "rows",
+                  "question_text": "Opt-in this client for digital policy delivery?",
+                  "index": 1,
+                  "response": {
+                    "label": "No",
+                    "id": "c8fb1b0f-a866-4a41-a6d2-229fed06c5ac"
+                  },
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": {
+                    "required": {
+                      "value": true,
+                      "error_message": "field is required"
+                    }
+                  },
+                  "response_options": [
+                    {
+                      "label": "Yes",
+                      "id": "688e107f-d0c1-437a-a9fe-b62de1009121"
+                    },
+                    {
+                      "label": "No",
+                      "id": "c8fb1b0f-a866-4a41-a6d2-229fed06c5ac"
+                    }
+                  ],
+                  "parent_question_answer": [],
+                  "child_questions": false,
+                  "child_questions_on": [],
+                  "question_status": "valid",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 1
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                }
+              ],
+              "sureify_id": "",
+              "submission_complete": true
+            }
+          ],
+          "sureify_id": "",
+          "application_section_id": "2402",
+          "distribution": "1,28,29",
+          "force_init": false,
+          "is_complete": false
+        },
+        {
+          "question_id": "76fe7715-74a2-4c08-8edb-3531effa9f2f",
+          "question_type": "group",
+          "display_type": "breadcrumb",
+          "display_immediately": false,
+          "orientation": "",
+          "question_text": "Whole Life",
+          "index": 1,
+          "response": "",
+          "sequence_number": 1,
+          "is_reviewable": true,
+          "is_editable": true,
+          "is_edit_icon_visible": false,
+          "is_hidden": false,
+          "presentation_type": "",
+          "validations": [],
+          "response_options": [],
+          "parent_question_answer": {
+            "questions": {
+              "cond_tag0": {
+                "variant_tag_uuid": "2e520d02-b615-46de-92f3-6767e2c537a4"
+              }
+            },
+            "version": "v2",
+            "operator": "&&",
+            "exp": "@@cond_tag0@@"
+          },
+          "child_questions": false,
+          "child_questions_on": [],
+          "question_status": "",
+          "question_status_message": "",
+          "hint_text": "",
+          "properties": {
+            "display_properties": {
+              "element_layout": "default",
+              "group_layout": "",
+              "new_row": 0
+            }
+          },
+          "sureify_meta": {
+            "source_id": 1
+          },
+          "show_always": false,
+          "is_readonly": false,
+          "questions": [
+            {
+              "question_id": "81584343-7781-4418-9b6a-ed8fc6a63dd4",
+              "question_type": "group",
+              "display_type": "questions_group",
+              "display_immediately": false,
+              "orientation": "",
+              "question_text": "Coverage Information",
+              "index": 1,
+              "response": "",
+              "sequence_number": 1,
+              "is_reviewable": true,
+              "is_editable": true,
+              "is_edit_icon_visible": false,
+              "is_hidden": false,
+              "presentation_type": "",
+              "validations": [],
+              "response_options": [],
+              "parent_question_answer": {
+                "questions": {
+                  "cond_tag0": {
+                    "variant_tag_uuid": "2e520d02-b615-46de-92f3-6767e2c537a4"
+                  }
+                },
+                "version": "v2",
+                "operator": "&&",
+                "exp": "@@cond_tag0@@"
+              },
+              "child_questions": false,
+              "child_questions_on": [],
+              "question_status": "",
+              "question_status_message": "",
+              "hint_text": "",
+              "properties": {
+                "display_properties": {
+                  "group_layout": "double",
+                  "element_layout": "",
+                  "new_row": 0
+                }
+              },
+              "sureify_meta": {
+                "source_id": 1
+              },
+              "question_subtitle": "",
+              "show_always": false,
+              "is_readonly": false,
+              "questions": [
+                {
+                  "question_id": "ce094909-eea5-4897-8f32-a141591fc197",
+                  "question_type": "singleselection",
+                  "display_type": "dropdown",
+                  "display_immediately": false,
+                  "orientation": "",
+                  "question_text": "Face Amount",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": {
+                    "required": {
+                      "value": true,
+                      "error_message": "field is required"
+                    }
+                  },
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "2e520d02-b615-46de-92f3-6767e2c537a4"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": false,
+                  "child_questions_on": [
+                    "faaabd00-f832-4a67-9c5f-3055ab9167dc"
+                  ],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": [],
+                  "response_options": [
+                    {
+                      "label": "50000",
+                      "id": "faaabd00-f832-4a67-9c5f-3055ab9167dc"
+                    },
+                    {
+                      "label": "100000",
+                      "id": "7bc6bc82-4483-40ed-a0b6-1c5a2ab76840"
+                    },
+                    {
+                      "label": "150000",
+                      "id": "10aba18a-85f5-4ef2-a538-c333ae7c9ba8"
+                    },
+                    {
+                      "label": "200000",
+                      "id": "f259fef6-378e-4d35-9c96-b3b311c687df"
+                    },
+                    {
+                      "label": "250000",
+                      "id": "d50d2f93-6e47-4eab-8aec-5276e51acdd4"
+                    },
+                    {
+                      "label": "300000",
+                      "id": "fe5c6979-6df2-4b51-b680-27381c3cbc58"
+                    },
+                    {
+                      "label": "350000",
+                      "id": "eb6340a8-6e9d-41b0-b5d1-7b948b753c37"
+                    },
+                    {
+                      "label": "400000",
+                      "id": "cf2cd30a-b81e-4400-9455-0cbb2e41ec0c"
+                    },
+                    {
+                      "label": "450000",
+                      "id": "218eb2e3-58e8-4f28-912d-f2872aa3e9e2"
+                    },
+                    {
+                      "label": "500000",
+                      "id": "0771f024-86af-4bfa-bc51-eb07ee15c459"
+                    },
+                    {
+                      "label": "550000",
+                      "id": "483e93ec-13a6-4faf-bc2d-e5bbb03798ac"
+                    },
+                    {
+                      "label": "600000",
+                      "id": "22d39b08-2bfc-4255-9923-762b3918843f"
+                    },
+                    {
+                      "label": "650000",
+                      "id": "0fd8c11a-48f2-402d-8c51-fd744df9625d"
+                    },
+                    {
+                      "label": "700000",
+                      "id": "54cf8f1b-9a74-4f65-ac0f-9d629dc57e49"
+                    },
+                    {
+                      "label": "750000",
+                      "id": "91318220-cdae-483d-9cab-d88e60609f78"
+                    },
+                    {
+                      "label": "800000",
+                      "id": "d3aac5c2-5bc5-4f7a-84e1-88e464f20c82"
+                    },
+                    {
+                      "label": "850000",
+                      "id": "e17db883-cf21-4161-9a6a-3fc845083776"
+                    },
+                    {
+                      "label": "900000",
+                      "id": "958cf179-5705-4a75-b6dc-ffa187e6ca17"
+                    },
+                    {
+                      "label": "950000",
+                      "id": "0914a350-0833-40de-846a-e494c08f2a20"
+                    },
+                    {
+                      "label": "1000000",
+                      "id": "ab1a3ed4-3766-45f7-a677-b7a37c74e848"
+                    },
+                    {
+                      "label": "1500000",
+                      "id": "b88884f3-9579-4f0f-aa68-4a6cd878b96b"
+                    },
+                    {
+                      "label": "2000000",
+                      "id": "c4738e56-fa0d-494d-8b34-02c9b8696d86"
+                    },
+                    {
+                      "label": "2500000",
+                      "id": "6dd1ff09-49ab-4275-898c-e7c0b1c0f858"
+                    },
+                    {
+                      "label": "3000000",
+                      "id": "19ee4090-0177-4efe-8704-d52ffa019cf1"
+                    },
+                    {
+                      "label": "3500000",
+                      "id": "e1f31703-0b5a-442d-a34a-c1ed1f1429c5"
+                    },
+                    {
+                      "label": "4000000",
+                      "id": "4713dc5b-5f1f-497b-af48-39953ef7ab31"
+                    },
+                    {
+                      "label": "4500000",
+                      "id": "8563395d-a96e-4dda-8817-5f118ee654d2"
+                    },
+                    {
+                      "label": "5000000",
+                      "id": "28cb7586-0162-4d9e-be8a-acf06f2cadeb"
+                    }
+                  ],
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": "WholeLife.FaceAmount"
+                },
+                {
+                  "question_id": "deef2aa2-2364-4196-ac0c-4099a3a96d73",
+                  "question_type": "number",
+                  "display_type": "number",
+                  "display_immediately": false,
+                  "orientation": "",
+                  "question_text": "Premium Amount",
+                  "index": 1,
+                  "response": "22.09",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": {
+                    "placeholder_text": {
+                      "value": "99",
+                      "hide": false
+                    },
+                    "required": {
+                      "value": true,
+                      "error_message": "field is required"
+                    },
+                    "min_value": {
+                      "value": 0,
+                      "error_message": "Value can't be less than 0."
+                    },
+                    "max_value": {
+                      "value": 10000,
+                      "error_message": "Value can't be more than 10000."
+                    },
+                    "prefix": {
+                      "value": "$"
+                    }
+                  },
+                  "response_options": [],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "2e520d02-b615-46de-92f3-6767e2c537a4"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": false,
+                  "child_questions_on": [],
+                  "question_status": "valid",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "auto_format_type": "Currency",
+                  "is_readonly": false,
+                  "default_response": "22.09",
+                  "questions": [],
+                  "sureify_id": "WholeLife.PremiumAmount"
+                },
+                {
+                  "question_id": "b70cf037-c112-48da-bd3e-920cfc7e4ce5",
+                  "question_type": "singleselection",
+                  "display_type": "dropdown",
+                  "display_immediately": false,
+                  "orientation": "",
+                  "question_text": "Risk Class",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": {
+                    "required": {
+                      "value": true,
+                      "error_message": "field is required"
+                    }
+                  },
+                  "response_options": [
+                    {
+                      "label": "Select Preferred",
+                      "id": "5eb1877b-a1eb-4ef6-a353-605d65bbf1d4"
+                    },
+                    {
+                      "label": "Preferred II",
+                      "id": "9164f2df-252f-4395-805e-e1e4b267feda"
+                    },
+                    {
+                      "label": "Non Smoker",
+                      "id": "f9ec990f-e934-4883-8d01-f0d78c68d0c4"
+                    },
+                    {
+                      "label": "Select Standard",
+                      "id": "cfd7088e-10a8-4d0d-957d-7e44359ff389"
+                    },
+                    {
+                      "label": "Juvenile",
+                      "id": "6df1da0f-3829-4cf8-bda2-25897840f150"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "2e520d02-b615-46de-92f3-6767e2c537a4"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": false,
+                  "child_questions_on": [],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": "WholeLife.RiskClass"
+                },
+                {
+                  "question_id": "343d117b-3d9d-426d-958f-a524ba056ac8",
+                  "question_type": "singleselection",
+                  "display_type": "dropdown",
+                  "display_immediately": false,
+                  "orientation": "",
+                  "question_text": "Dividend Options",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": {
+                    "required": {
+                      "value": true,
+                      "error_message": "field is required"
+                    }
+                  },
+                  "response_options": [
+                    {
+                      "label": "Accumulation",
+                      "id": "ae728c2b-485d-4f5b-8faa-c72d80464ba0"
+                    },
+                    {
+                      "label": "Premium",
+                      "id": "4e03993c-b399-458a-b92f-7c194777c749"
+                    },
+                    {
+                      "label": "Cash",
+                      "id": "f0c824d1-74fb-45d4-ac9f-85b03f1cf623"
+                    },
+                    {
+                      "label": "Paid-Up Additions",
+                      "id": "62539bd2-3c3c-474e-9c43-0e68b2e26a53"
+                    },
+                    {
+                      "label": "Pay to Age 100",
+                      "id": "d645b05b-7c86-4cee-9a59-8c338e23e63e"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "2e520d02-b615-46de-92f3-6767e2c537a4"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": false,
+                  "child_questions_on": [],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": "WholeLife.DividendOptions"
+                }
+              ],
+              "sureify_id": ""
+            },
+            {
+              "question_id": "0b5f14fc-0e37-439f-8480-f8b14840eb4d",
+              "question_type": "group",
+              "display_type": "questions_group",
+              "display_immediately": false,
+              "orientation": "",
+              "question_text": "Riders",
+              "index": 1,
+              "response": "",
+              "sequence_number": 1,
+              "is_reviewable": true,
+              "is_editable": true,
+              "is_edit_icon_visible": false,
+              "is_hidden": false,
+              "presentation_type": "",
+              "validations": [],
+              "response_options": [],
+              "parent_question_answer": {
+                "questions": {
+                  "cond_tag0": {
+                    "variant_tag_uuid": "2e520d02-b615-46de-92f3-6767e2c537a4"
+                  }
+                },
+                "version": "v2",
+                "operator": "&&",
+                "exp": "@@cond_tag0@@"
+              },
+              "child_questions": false,
+              "child_questions_on": [],
+              "question_status": "",
+              "question_status_message": "",
+              "hint_text": "",
+              "properties": {
+                "display_properties": {
+                  "group_layout": "single",
+                  "element_layout": "",
+                  "new_row": 0
+                }
+              },
+              "sureify_meta": {
+                "source_id": 1
+              },
+              "show_always": false,
+              "question_subtitle": "",
+              "is_readonly": false,
+              "questions": [
+                {
+                  "question_id": "4c731714-d7a1-4fa3-bc42-bd07bf90f4b0",
+                  "question_type": "multiselection",
+                  "display_type": "checkbox",
+                  "display_immediately": false,
+                  "orientation": "rows",
+                  "question_text": "",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": [],
+                  "response_options": [
+                    {
+                      "label": "Waiver Of Premium",
+                      "id": "d7def258-a2af-4e02-b0e1-3c2c3473be3a"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "2e520d02-b615-46de-92f3-6767e2c537a4"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": false,
+                  "child_questions_on": [],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                },
+                {
+                  "question_id": "631379ca-8565-4b63-a010-853a1afab6c6",
+                  "question_type": "multiselection",
+                  "display_type": "checkbox",
+                  "display_immediately": false,
+                  "orientation": "rows",
+                  "question_text": "",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": [],
+                  "response_options": [
+                    {
+                      "label": "Accidental Death Benefit",
+                      "id": "856659dc-f924-4c29-90e6-d4f991ae82c2"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "2e520d02-b615-46de-92f3-6767e2c537a4"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": false,
+                  "child_questions_on": [],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                },
+                {
+                  "question_id": "028ae5b0-e77a-42b6-b0af-db061884974a",
+                  "question_type": "multiselection",
+                  "display_type": "checkbox",
+                  "display_immediately": false,
+                  "orientation": "rows",
+                  "question_text": "",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": [],
+                  "response_options": [
+                    {
+                      "label": "Atomatic Premium Loan",
+                      "id": "2ff55190-bce0-4c04-80bb-182b1c0ba75b"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "2e520d02-b615-46de-92f3-6767e2c537a4"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": false,
+                  "child_questions_on": [],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                },
+                {
+                  "question_id": "743c036a-3a33-4da3-9d5a-ae143cbaa04c",
+                  "question_type": "multiselection",
+                  "display_type": "checkbox",
+                  "display_immediately": false,
+                  "orientation": "rows",
+                  "question_text": "",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": [],
+                  "response_options": [
+                    {
+                      "label": "Chronic Care",
+                      "id": "30820fd4-830e-4327-8249-1f63faf1d4c5"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "2e520d02-b615-46de-92f3-6767e2c537a4"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": false,
+                  "child_questions_on": [],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                },
+                {
+                  "question_id": "ad9bc456-b846-44c4-b1d4-c2cd251509ae",
+                  "question_type": "multiselection",
+                  "display_type": "checkbox",
+                  "display_immediately": false,
+                  "orientation": "rows",
+                  "question_text": "",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": [],
+                  "response_options": [
+                    {
+                      "label": "Child Protection Benefit",
+                      "id": "2b4c30ef-e396-46eb-b805-7b63be0e8a37"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "2e520d02-b615-46de-92f3-6767e2c537a4"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": false,
+                  "child_questions_on": [],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                },
+                {
+                  "question_id": "7195ff2a-55c8-4c30-956f-5e4aa558adc1",
+                  "question_type": "multiselection",
+                  "display_type": "checkbox",
+                  "display_immediately": false,
+                  "orientation": "rows",
+                  "question_text": "",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": [],
+                  "response_options": [
+                    {
+                      "label": "Policy Purchase Option",
+                      "id": "8a11fe24-158a-43d8-9e84-0a304c237486"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "2e520d02-b615-46de-92f3-6767e2c537a4"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": false,
+                  "child_questions_on": [],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                },
+                {
+                  "question_id": "1ecb6982-0fcc-4e98-af32-4ed8dcf4d9f9",
+                  "question_type": "multiselection",
+                  "display_type": "checkbox",
+                  "display_immediately": false,
+                  "orientation": "rows",
+                  "question_text": "",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": [],
+                  "response_options": [
+                    {
+                      "label": "Payer's Protection Benefit",
+                      "id": "f3c25f25-e418-4049-9d5e-547adcf2c0ed"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "2e520d02-b615-46de-92f3-6767e2c537a4"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": false,
+                  "child_questions_on": [],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                },
+                {
+                  "question_id": "1bdc16b3-9f22-470f-9065-0e27954c46fc",
+                  "question_type": "multiselection",
+                  "display_type": "checkbox",
+                  "display_immediately": false,
+                  "orientation": "rows",
+                  "question_text": "",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": [],
+                  "response_options": [
+                    {
+                      "label": "Dividend Option Term (DOT)",
+                      "id": "73af6dc1-f049-4fc2-9e5e-bafd052dec8e"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "2e520d02-b615-46de-92f3-6767e2c537a4"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": true,
+                  "child_questions_on": [
+                    "73af6dc1-f049-4fc2-9e5e-bafd052dec8e"
+                  ],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                },
+                {
+                  "question_id": "8dc9b9c0-319e-4112-acb6-e1d79d45fb01",
+                  "question_type": "multiselection",
+                  "display_type": "checkbox",
+                  "display_immediately": false,
+                  "orientation": "rows",
+                  "question_text": "",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": [],
+                  "response_options": [
+                    {
+                      "label": "Option to Purchase Paid up Additions (OPP)",
+                      "id": "034c1405-33a4-44d5-b000-ab1a87fde823"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "2e520d02-b615-46de-92f3-6767e2c537a4"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": true,
+                  "child_questions_on": [
+                    "034c1405-33a4-44d5-b000-ab1a87fde823"
+                  ],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "maximize",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                },
+                {
+                  "question_id": "318594fc-4ec9-4c36-bd98-31d904df7e69",
+                  "question_type": "multiselection",
+                  "display_type": "checkbox",
+                  "display_immediately": false,
+                  "orientation": "rows",
+                  "question_text": "",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": [],
+                  "response_options": [
+                    {
+                      "label": "Level Term Rider -Other Covered Insured",
+                      "id": "f6cb9d7c-505b-4c3d-934a-a2236719dffd"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "2e520d02-b615-46de-92f3-6767e2c537a4"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": true,
+                  "child_questions_on": [
+                    "f6cb9d7c-505b-4c3d-934a-a2236719dffd"
+                  ],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "maximize",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                },
+                {
+                  "question_id": "471243b5-cafb-41b1-b877-94904002cf53",
+                  "question_type": "multiselection",
+                  "display_type": "checkbox",
+                  "display_immediately": false,
+                  "orientation": "rows",
+                  "question_text": "",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": [],
+                  "response_options": [
+                    {
+                      "label": "Level Term Rider - Primary Insured",
+                      "id": "1743da2a-95af-4e6a-98fa-a1a67ca9ffb6"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "2e520d02-b615-46de-92f3-6767e2c537a4"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": true,
+                  "child_questions_on": [
+                    "1743da2a-95af-4e6a-98fa-a1a67ca9ffb6"
+                  ],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                },
+                {
+                  "question_id": "c1086901-5f54-436a-8d73-d1adc4a53b94",
+                  "question_type": "multiselection",
+                  "display_type": "checkbox",
+                  "display_immediately": false,
+                  "orientation": "rows",
+                  "question_text": "",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": [],
+                  "response_options": [
+                    {
+                      "label": "Yearly Renewable Term Rider - Primary Insured",
+                      "id": "71fafa3d-49d6-4ccd-a275-373ed798f96b"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "2e520d02-b615-46de-92f3-6767e2c537a4"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": true,
+                  "child_questions_on": [
+                    "71fafa3d-49d6-4ccd-a275-373ed798f96b"
+                  ],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "maximize",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                },
+                {
+                  "question_id": "1da7e880-b374-4c35-b7af-2f9856dbe511",
+                  "question_type": "multiselection",
+                  "display_type": "checkbox",
+                  "display_immediately": false,
+                  "orientation": "rows",
+                  "question_text": "",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": [],
+                  "response_options": [
+                    {
+                      "label": "Yearly Renewable Term Rider - Other Covered Insured",
+                      "id": "c096fad2-b448-450b-b26b-abad6fc22c4a"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "2e520d02-b615-46de-92f3-6767e2c537a4"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": true,
+                  "child_questions_on": [
+                    "c096fad2-b448-450b-b26b-abad6fc22c4a"
+                  ],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "maximize",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                },
+                {
+                  "question_id": "8c32fb1c-4756-42ef-81b5-7b86491e90f0",
+                  "question_type": "multiselection",
+                  "display_type": "checkbox",
+                  "display_immediately": false,
+                  "orientation": "rows",
+                  "question_text": "",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": [],
+                  "response_options": [
+                    {
+                      "label": "Living Benefits Rider",
+                      "id": "4c91c070-c045-449e-832b-6ca373d7b2b8"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_0": {
+                        "answer": [
+                          "f60a3da4-f46f-4182-a556-e881f7f32eae"
+                        ],
+                        "operator": "OR",
+                        "question_id": "b364a7a4-e7e1-47c6-896a-ea4a9b3ed683"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_0@@"
+                  },
+                  "child_questions": false,
+                  "child_questions_on": [],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                }
+              ],
+              "sureify_id": ""
+            }
+          ],
+          "sureify_id": "",
+          "application_section_id": "2402",
+          "distribution": "1,28,29",
+          "force_init": false,
+          "is_complete": false
+        },
+        {
+          "question_id": "fda6faca-5d12-4bca-ae91-62c0b6f2b78c",
+          "question_type": "group",
+          "display_type": "breadcrumb",
+          "display_immediately": false,
+          "orientation": "",
+          "question_text": "Term Life",
+          "index": 1,
+          "response": "",
+          "sequence_number": 1,
+          "is_reviewable": true,
+          "is_editable": true,
+          "is_edit_icon_visible": false,
+          "is_hidden": false,
+          "presentation_type": "",
+          "validations": [],
+          "response_options": [],
+          "parent_question_answer": {
+            "questions": {
+              "cond_tag0": {
+                "variant_tag_uuid": "707ca4aa-e5e3-4f64-850a-8f701b8bdb64"
+              }
+            },
+            "version": "v2",
+            "operator": "&&",
+            "exp": "@@cond_tag0@@"
+          },
+          "child_questions": false,
+          "child_questions_on": [],
+          "question_status": "",
+          "question_status_message": "",
+          "hint_text": "",
+          "properties": {
+            "display_properties": {
+              "element_layout": "default",
+              "group_layout": "",
+              "new_row": 0
+            }
+          },
+          "sureify_meta": {
+            "source_id": 1
+          },
+          "show_always": false,
+          "is_readonly": false,
+          "questions": [
+            {
+              "question_id": "2ba5d803-5eb2-438a-abf6-98cda05c6ad6",
+              "question_type": "group",
+              "display_type": "questions_group",
+              "display_immediately": false,
+              "orientation": "",
+              "question_text": "Coverage Information",
+              "index": 1,
+              "response": "",
+              "sequence_number": 1,
+              "is_reviewable": true,
+              "is_editable": true,
+              "is_edit_icon_visible": false,
+              "is_hidden": false,
+              "presentation_type": "",
+              "validations": [],
+              "response_options": [],
+              "parent_question_answer": {
+                "questions": {
+                  "cond_tag0": {
+                    "variant_tag_uuid": "707ca4aa-e5e3-4f64-850a-8f701b8bdb64"
+                  }
+                },
+                "version": "v2",
+                "operator": "&&",
+                "exp": "@@cond_tag0@@"
+              },
+              "child_questions": false,
+              "child_questions_on": [],
+              "question_status": "",
+              "question_status_message": "",
+              "hint_text": "",
+              "properties": {
+                "display_properties": {
+                  "group_layout": "double",
+                  "element_layout": "",
+                  "new_row": 0
+                }
+              },
+              "sureify_meta": {
+                "source_id": 1
+              },
+              "question_subtitle": "",
+              "show_always": false,
+              "is_readonly": false,
+              "questions": [
+                {
+                  "question_id": "41198a51-b1d1-4c27-ab43-d6dfc776a202",
+                  "question_type": "singleselection",
+                  "display_type": "dropdown",
+                  "display_immediately": false,
+                  "orientation": "",
+                  "question_text": "Face Amount",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": {
+                    "required": {
+                      "value": true,
+                      "error_message": "field is required"
+                    }
+                  },
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "707ca4aa-e5e3-4f64-850a-8f701b8bdb64"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": false,
+                  "child_questions_on": [],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": [],
+                  "response_options": [
+                    {
+                      "label": "50000",
+                      "id": "c2ec3363-24df-4686-b3b7-3f36f3c95850"
+                    },
+                    {
+                      "label": "100000",
+                      "id": "dd232c98-e68f-4480-b266-da355e9c26d1"
+                    },
+                    {
+                      "label": "150000",
+                      "id": "6dfc1e60-abf9-4363-81d9-cb219344e6a6"
+                    },
+                    {
+                      "label": "200000",
+                      "id": "31bd0aa7-7600-42d9-8ebe-6146e3df2cf3"
+                    },
+                    {
+                      "label": "250000",
+                      "id": "39eefade-3ccd-4e5a-9b0b-1e6a8e83e6c3"
+                    },
+                    {
+                      "label": "300000",
+                      "id": "5f14ed4a-b325-4897-a6ff-53ae907ee174"
+                    },
+                    {
+                      "label": "350000",
+                      "id": "72979c9c-6b70-42ab-866a-98b158fd196d"
+                    },
+                    {
+                      "label": "400000",
+                      "id": "b794a622-adb9-4e81-8c14-213c10e32b5c"
+                    },
+                    {
+                      "label": "450000",
+                      "id": "f5794bd0-ef15-4fea-8039-c63460e930c5"
+                    },
+                    {
+                      "label": "500000",
+                      "id": "95cb7aff-f58e-467b-a11d-b03304e33ea5"
+                    },
+                    {
+                      "label": "550000",
+                      "id": "7aade43f-cb8a-4867-a4ca-71b60725fdee"
+                    },
+                    {
+                      "label": "600000",
+                      "id": "bd300263-1aec-4a08-aca8-a219c5991145"
+                    },
+                    {
+                      "label": "650000",
+                      "id": "d9d63375-135f-415b-8ea2-db0a8c7473a0"
+                    },
+                    {
+                      "label": "700000",
+                      "id": "c983e66c-4fd8-4488-8df1-182477bc027c"
+                    },
+                    {
+                      "label": "750000",
+                      "id": "3bb50116-0df2-4f5c-8721-a83586357af3"
+                    },
+                    {
+                      "label": "800000",
+                      "id": "b5b72658-d3e5-4bcb-bc29-047c0f67f371"
+                    },
+                    {
+                      "label": "850000",
+                      "id": "55006580-3134-4fd4-bd06-a1608bfc7753"
+                    },
+                    {
+                      "label": "900000",
+                      "id": "2bd50e69-c261-4ec4-ac0c-674234374198"
+                    },
+                    {
+                      "label": "1000000",
+                      "id": "339e789e-c94e-4a23-91d3-5734dd7caf77"
+                    },
+                    {
+                      "label": "1500000",
+                      "id": "dc75a559-61e9-4d10-9699-fa61547a826a"
+                    },
+                    {
+                      "label": "2000000",
+                      "id": "6235fd14-bb40-40cf-bb2b-655324dc6e5c"
+                    },
+                    {
+                      "label": "2500000",
+                      "id": "ad1cea86-7245-49fe-b46e-217452f90081"
+                    },
+                    {
+                      "label": "3000000",
+                      "id": "b6318bc4-7bd9-4fc9-830c-26a63eaa8803"
+                    },
+                    {
+                      "label": "3500000",
+                      "id": "371ca1ac-3f70-4f37-a381-162bacf79c8b"
+                    },
+                    {
+                      "label": "4000000",
+                      "id": "7fef2738-7c32-448e-8a08-b855a648dade"
+                    },
+                    {
+                      "label": "4500000",
+                      "id": "ecabc7a8-a48b-4116-a867-aee2252470bd"
+                    },
+                    {
+                      "label": "5000000",
+                      "id": "aebb0b6e-cceb-4640-83b8-47650d7f7dba"
+                    }
+                  ],
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": "TermLife.FaceAmount"
+                },
+                {
+                  "question_id": "bb8dab49-81ec-4840-975e-2ba8b0c2324c",
+                  "question_type": "singleselection",
+                  "display_type": "dropdown",
+                  "display_immediately": false,
+                  "orientation": "",
+                  "question_text": "Options:",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": {
+                    "required": {
+                      "value": true,
+                      "error_message": "field is required"
+                    }
+                  },
+                  "response_options": [
+                    {
+                      "label": "10 Years",
+                      "id": "ccd3754a-0732-4fda-9dd1-989592784d36"
+                    },
+                    {
+                      "label": "15 Years",
+                      "id": "8bc1bf3a-814a-411c-bed4-64373700a2da"
+                    },
+                    {
+                      "label": "20 Years",
+                      "id": "2907a1d4-4c2e-4e4e-a022-65406eb56b1a"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "707ca4aa-e5e3-4f64-850a-8f701b8bdb64"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": true,
+                  "child_questions_on": [
+                    "8bc1bf3a-814a-411c-bed4-64373700a2da",
+                    "2907a1d4-4c2e-4e4e-a022-65406eb56b1a"
+                  ],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                },
+                {
+                  "question_id": "3284fa0c-92ca-4bbe-937d-d1b9e03cc82d",
+                  "question_type": "text",
+                  "display_type": "text",
+                  "display_immediately": false,
+                  "orientation": "",
+                  "question_text": "Guaranteed Level Premium Year",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": {
+                    "placeholder_text": {
+                      "hide": true
+                    },
+                    "required": {
+                      "value": true,
+                      "error_message": "field is required"
+                    }
+                  },
+                  "response_options": [],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "707ca4aa-e5e3-4f64-850a-8f701b8bdb64"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": false,
+                  "child_questions_on": [],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    }
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                },
+                {
+                  "question_id": "66ad72bf-2b10-4478-a948-b95b2c29a45f",
+                  "question_type": "number",
+                  "display_type": "number",
+                  "display_immediately": false,
+                  "orientation": "",
+                  "question_text": "Premium Amount",
+                  "index": 1,
+                  "response": "12.69",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": {
+                    "placeholder_text": {
+                      "value": "99",
+                      "hide": false
+                    },
+                    "required": {
+                      "value": true,
+                      "error_message": "field is required"
+                    },
+                    "min_value": {
+                      "value": 0,
+                      "error_message": "Value can't be less than 0."
+                    },
+                    "max_value": {
+                      "value": 10000,
+                      "error_message": "Value can't be more than 10000."
+                    },
+                    "prefix": {
+                      "value": "$"
+                    }
+                  },
+                  "response_options": [],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "707ca4aa-e5e3-4f64-850a-8f701b8bdb64"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": false,
+                  "child_questions_on": [],
+                  "question_status": "valid",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "auto_format_type": "Currency",
+                  "is_readonly": false,
+                  "default_response": "12.69",
+                  "questions": [],
+                  "sureify_id": "TermLife.PremiumAmount"
+                },
+                {
+                  "question_id": "7776e697-b853-4ebe-ba0d-b6977653ccc0",
+                  "question_type": "singleselection",
+                  "display_type": "dropdown",
+                  "display_immediately": false,
+                  "orientation": "",
+                  "question_text": "Dividend Option",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": {
+                    "required": {
+                      "value": true,
+                      "error_message": "field is required"
+                    }
+                  },
+                  "response_options": [
+                    {
+                      "label": "Accumulation",
+                      "id": "fa8b0f18-fd1b-40f9-b4ea-f77c4cab88e2"
+                    },
+                    {
+                      "label": "Premium",
+                      "id": "b4701b81-b091-4b9c-8a26-493143319acf"
+                    },
+                    {
+                      "label": "Cash",
+                      "id": "978cd9b3-6d57-47e0-a398-d30565f70125"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "707ca4aa-e5e3-4f64-850a-8f701b8bdb64"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": false,
+                  "child_questions_on": [],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": "TermLife.DividendOption"
+                }
+              ],
+              "sureify_id": ""
+            },
+            {
+              "question_id": "08bb53d5-5a24-44d9-8161-759f80b66496",
+              "question_type": "group",
+              "display_type": "questions_group",
+              "display_immediately": false,
+              "orientation": "",
+              "question_text": "Riders Term",
+              "index": 1,
+              "response": "",
+              "sequence_number": 1,
+              "is_reviewable": true,
+              "is_editable": true,
+              "is_edit_icon_visible": false,
+              "is_hidden": false,
+              "presentation_type": "",
+              "validations": [],
+              "response_options": [],
+              "parent_question_answer": {
+                "questions": {
+                  "cond_tag0": {
+                    "variant_tag_uuid": "707ca4aa-e5e3-4f64-850a-8f701b8bdb64"
+                  }
+                },
+                "version": "v2",
+                "operator": "&&",
+                "exp": "@@cond_tag0@@"
+              },
+              "child_questions": false,
+              "child_questions_on": [],
+              "question_status": "",
+              "question_status_message": "",
+              "hint_text": "",
+              "properties": {
+                "display_properties": {
+                  "group_layout": "single",
+                  "element_layout": "",
+                  "new_row": 0
+                }
+              },
+              "sureify_meta": {
+                "source_id": 1
+              },
+              "show_always": false,
+              "question_subtitle": "",
+              "is_readonly": false,
+              "questions": [
+                {
+                  "question_id": "23c6bded-4d56-4db1-96d9-a44d10cc9514",
+                  "question_type": "multiselection",
+                  "display_type": "checkbox",
+                  "display_immediately": false,
+                  "orientation": "rows",
+                  "question_text": "",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": [],
+                  "response_options": [
+                    {
+                      "label": "Accidental Death Benefit",
+                      "id": "ee1c5358-b648-4c94-bd9d-fc168bfac4ef"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "707ca4aa-e5e3-4f64-850a-8f701b8bdb64"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": true,
+                  "child_questions_on": [
+                    "ee1c5358-b648-4c94-bd9d-fc168bfac4ef"
+                  ],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                },
+                {
+                  "question_id": "7fe66e1d-50e2-4ba5-b834-335bf67cc5e1",
+                  "question_type": "multiselection",
+                  "display_type": "checkbox",
+                  "display_immediately": false,
+                  "orientation": "rows",
+                  "question_text": "",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": [],
+                  "response_options": [
+                    {
+                      "label": "Policy Purchase Option",
+                      "id": "c578bc08-5377-4bb0-a09b-16c015617b69"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "707ca4aa-e5e3-4f64-850a-8f701b8bdb64"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": true,
+                  "child_questions_on": [
+                    "c578bc08-5377-4bb0-a09b-16c015617b69"
+                  ],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                },
+                {
+                  "question_id": "69191927-188c-4e58-a3c2-bbefc81795f8",
+                  "question_type": "multiselection",
+                  "display_type": "checkbox",
+                  "display_immediately": false,
+                  "orientation": "rows",
+                  "question_text": "",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": [],
+                  "response_options": [
+                    {
+                      "label": "Living Benefits Rider",
+                      "id": "c512f3de-871e-4d6e-a88e-77eeaddcc99d"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "707ca4aa-e5e3-4f64-850a-8f701b8bdb64"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": false,
+                  "child_questions_on": [],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                },
+                {
+                  "question_id": "fb7a9742-12b0-437d-a92f-d1b83436bfcf",
+                  "question_type": "multiselection",
+                  "display_type": "checkbox",
+                  "display_immediately": false,
+                  "orientation": "rows",
+                  "question_text": "",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": [],
+                  "response_options": [
+                    {
+                      "label": "Level Term Rider - Primary Insured",
+                      "id": "95578b19-fadd-4298-8c34-e5d463dfdb91"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "707ca4aa-e5e3-4f64-850a-8f701b8bdb64"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": true,
+                  "child_questions_on": [
+                    "95578b19-fadd-4298-8c34-e5d463dfdb91"
+                  ],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "default",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                },
+                {
+                  "question_id": "e1605ac6-3278-4c32-80e5-552033cab03f",
+                  "question_type": "multiselection",
+                  "display_type": "checkbox",
+                  "display_immediately": false,
+                  "orientation": "rows",
+                  "question_text": "",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": [],
+                  "response_options": [
+                    {
+                      "label": "Level Term Rider -Other Covered Insured",
+                      "id": "38d5a139-1175-4129-bbe2-78ae9c75fef2"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "707ca4aa-e5e3-4f64-850a-8f701b8bdb64"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": true,
+                  "child_questions_on": [
+                    "38d5a139-1175-4129-bbe2-78ae9c75fef2"
+                  ],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "maximize",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                },
+                {
+                  "question_id": "964c1868-a6d6-453b-9f6b-b185878496a1",
+                  "question_type": "multiselection",
+                  "display_type": "checkbox",
+                  "display_immediately": false,
+                  "orientation": "rows",
+                  "question_text": "",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": [],
+                  "response_options": [
+                    {
+                      "label": "Yearly Renewable Term Rider - Primary Insured",
+                      "id": "b5d94ea5-2510-49b6-9d5c-342845af16a5"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "707ca4aa-e5e3-4f64-850a-8f701b8bdb64"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": true,
+                  "child_questions_on": [
+                    "b5d94ea5-2510-49b6-9d5c-342845af16a5"
+                  ],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "maximize",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                },
+                {
+                  "question_id": "2eee79cf-96b7-4b50-9530-2acffb5ae79f",
+                  "question_type": "multiselection",
+                  "display_type": "checkbox",
+                  "display_immediately": false,
+                  "orientation": "rows",
+                  "question_text": "",
+                  "index": 1,
+                  "response": "",
+                  "sequence_number": 1,
+                  "is_reviewable": true,
+                  "is_editable": true,
+                  "is_edit_icon_visible": false,
+                  "is_hidden": false,
+                  "presentation_type": "",
+                  "validations": [],
+                  "response_options": [
+                    {
+                      "label": "Yearly Renewable Term Rider - Other Covered Insured",
+                      "id": "13aeab4a-ff49-45ef-b8ad-f4ed4818262b"
+                    }
+                  ],
+                  "parent_question_answer": {
+                    "questions": {
+                      "cond_tag0": {
+                        "variant_tag_uuid": "707ca4aa-e5e3-4f64-850a-8f701b8bdb64"
+                      }
+                    },
+                    "version": "v2",
+                    "operator": "&&",
+                    "exp": "@@cond_tag0@@"
+                  },
+                  "child_questions": true,
+                  "child_questions_on": [
+                    "13aeab4a-ff49-45ef-b8ad-f4ed4818262b"
+                  ],
+                  "question_status": "missing",
+                  "question_status_message": "",
+                  "hint_text": "",
+                  "properties": {
+                    "display_properties": {
+                      "element_layout": "maximize",
+                      "group_layout": "",
+                      "new_row": 0
+                    },
+                    "date_config": null
+                  },
+                  "sureify_meta": {
+                    "source_id": 1
+                  },
+                  "child_questions_completed_flag": null,
+                  "is_readonly": false,
+                  "questions": [],
+                  "sureify_id": ""
+                }
+              ],
+              "sureify_id": ""
+            }
+          ],
+          "sureify_id": "",
+          "application_section_id": "2402",
+          "distribution": "1,28,29",
+          "force_init": false,
+          "is_complete": false
+        }
+      ],
+      "completed": false
+    }
+  },
+  "page_desc": {
+    "desc": "",
+    "title": "",
+    "heading": "",
+    "insurance_company": ""
+  }
+}
