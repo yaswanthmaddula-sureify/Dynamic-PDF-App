@@ -2,12 +2,10 @@ import PdfPrinter from "pdfmake";
 import { customTableLayouts } from "./tableLayouts";
 import { Content, DynamicContent, TDocumentDefinitions, TableCell } from "pdfmake/interfaces";
 import { DisplayTypeEnum, IQuestionRaw, InputJSONType, LayoutType, QuestionTypeEnum, ResponseOptionType } from "./types";
-import { checkedIcon, unCheckedIcon } from "./fontelloIcons";
-import { mapOnlySelectedOptions, renderSingleMultiSelectQnSingleCol } from "./questionLayout";
+import { autoLayoutSinlgeMultiSelectQn, getTwoColumnSingleMultiSelectQnCell, renderSingleMultiSelectQnSingleCol } from "./questionLayout";
 
-const TABLE_LAYOUT: LayoutType = LayoutType.single as LayoutType;
-
-
+const TABLE_LAYOUT: LayoutType = LayoutType.double as LayoutType;
+const AUTO_LAYOUT = false;
 
 /**
  * Creates the header configuration for the PDF document.
@@ -54,30 +52,6 @@ const createFooter = (leftText = 'ICC24-LAAA-0138', rightText = '(01/2024)'): Co
 }
 
 /**
- * Checks if the given option is selected in the user's response to a question.
- * @param question - The question object.
- * @param option - The option to check.
- * @returns True if the option is selected, false otherwise.
- */
-const getIsOptionsSelected = (question: IQuestionRaw, option: ResponseOptionType): boolean => {
-    const userResponse = question.response;
-
-    if (userResponse === null) {
-        return false;
-    }
-
-    if (Array.isArray(userResponse)) {
-        return userResponse.some(resp => resp.id === option.id);
-    }
-
-    if (typeof userResponse === 'object') {
-        return userResponse.id === option.id;
-    }
-
-    return false;
-}
-
-/**
  * Retrieves the table cells for a given question.
  * 
  * @param question - The question object.
@@ -101,35 +75,18 @@ const getQuestionCell = (question: IQuestionRaw, index: number | undefined = und
             ];
 
         case QuestionTypeEnum.singleSelect:
-        // const userResponse = question.response;
-
-        // let responseText = '';
-
-        // if (typeof userResponse === 'object' && userResponse !== null) {
-        //     responseText = (userResponse as ResponseOptionType).label;
-        // }
-
-        // return [
-        //     question?.question_text || '',
-        //     responseText
-        // ];
         case QuestionTypeEnum.multiSelect:
             // Ignore empty responses
             if (!Boolean(question.response)) {
                 return null;
             }
-            return [
-                question?.question_text || '',
-                {
-                    text: question.response_options.map(option => {
-                        const isSelected = getIsOptionsSelected(question, option);
 
-                        const icon = isSelected ? checkedIcon : unCheckedIcon;
+            if (AUTO_LAYOUT) {
+                return autoLayoutSinlgeMultiSelectQn(question);
+            }
 
-                        return { text: [icon, ` ${option.label}   `], noWrap: false }
-                    })
-                }
-            ];
+            return getTwoColumnSingleMultiSelectQnCell(question);
+
 
         case QuestionTypeEnum.label:
         case QuestionTypeEnum.button:
@@ -227,23 +184,7 @@ const getQuestionCellSingle = (question: IQuestionRaw, index: number | undefined
             if (!Boolean(question.response)) {
                 return null;
             }
-            return [{
-                margin: [0, 5, 0, 0],
-                stack: [
-                    `${(arrIndex ?? 0) + 1}) ${question?.question_text || ''}`,
-                    {
-                        margin: [0, 5, 0, 0],
-                        type: 'none',
-                        ul: question.response_options.map(option => {
-                            const isSelected = getIsOptionsSelected(question, option);
-
-                            const icon = isSelected ? checkedIcon : unCheckedIcon;
-
-                            return { margin: [0, 5, 0, 0], text: [icon, ` ${option.label}   `], noWrap: false }
-                        })
-                    }
-                ]
-            }]
+            return renderSingleMultiSelectQnSingleCol(question, TABLE_LAYOUT, arrIndex);
 
         case QuestionTypeEnum.label:
         case QuestionTypeEnum.button:
