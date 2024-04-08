@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
+import { API_BASE_URL } from "../constants";
 
 function PdfMake() {
     const [pdfUrl, setPdfUrl] = useState('');
 
     useEffect(() => {
         // Fetch PDF data from the server
-        fetch('https://probable-fiesta-vw7556r5q5qh6qr6-3090.app.github.dev/pdfmake')
+        fetch(`${API_BASE_URL}/pdfmake`)
             .then(response => response.blob())
             .then(blob => {
                 // Create a URL for the blob data

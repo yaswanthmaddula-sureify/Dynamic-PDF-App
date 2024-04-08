@@ -32,48 +32,54 @@ const personalAndMedicalHistory = [
     [{
         separator: ')',
         ol: [
-            'When did you last vape, use tobacco, or use nicotine products of any kind?',
-            {
-                margin: [0, 5, 0, 0],
-                type: 'none',
-                ul: [
-                    { text: [unCheckedIcon, ' Within the last 12 months   ', checkedIcon, ' 1–2 years ago   ', unCheckedIcon, ' 2-3 years ago'] },
-                    { text: [unCheckedIcon, ' 3-5 years ago   ', unCheckedIcon, ' More than 5 years ago   ', unCheckedIcon, ' Never used'] }
-                ]
-            },
-            {
-                text: 'In the last 5 years, have you had any of the following driving violations? (Select all that apply)',
-                margin: [0, 10, 0, 0]
-            },
-            {
-                margin: [0, 5, 0, 0],
-                type: 'none',
-                ul: [
-                    { text: [checkedIcon, " Revoked driver's license"] },
-                    { text: [unCheckedIcon, " Suspended driver's license"] },
-                    { text: [unCheckedIcon, " Plead guilty to or been convicted of reckless driving"] },
-                    { text: [unCheckedIcon, " Plead guilty to or convicted of driving while intoxicated with drugs or alcohol"] },
-                    { text: [unCheckedIcon, " Plead guilty to or convicted of driving under the influence of any drug or alcohol"] },
-                    { text: [unCheckedIcon, " None of the above"] },
-                ]
-            },
-            {
-                text: ['In the last 5 years, have you been diagnosed or treated by a medical professional for any of the following?', { text: '(Select all that apply)', italics: true }],
-                margin: [0, 10, 0, 0]
-            },
-            {
-                margin: [0, 5, 0, 0],
-                type: 'none',
-                ul: [
-                    { text: [unCheckedIcon, " Amyotrophic Lateral Sclerosis (ALS)"] },
-                    { text: [checkedIcon, " Parkinson’s Disease "] },
-                    { text: [unCheckedIcon, " Multiple Sclerosis"] },
-                    { text: [unCheckedIcon, " Muscular Dystrophy"] },
-                    { text: [unCheckedIcon, " Alzheimer’s disease"] },
-                    { text: [unCheckedIcon, " Dementia"] },
-                    { text: [unCheckedIcon, " None of the above"] }
-                ]
-            },
+            [
+                'When did you last vape, use tobacco, or use nicotine products of any kind?',
+                {
+                    margin: [0, 5, 0, 0],
+                    type: 'none',
+                    ul: [
+                        { text: [unCheckedIcon, ' Within the last 12 months   ', checkedIcon, ' 1–2 years ago   ', unCheckedIcon, ' 2-3 years ago'] },
+                        { text: [unCheckedIcon, ' 3-5 years ago   ', unCheckedIcon, ' More than 5 years ago   ', unCheckedIcon, ' Never used'] }
+                    ]
+                }
+            ],
+            [
+                {
+                    text: 'In the last 5 years, have you had any of the following driving violations? (Select all that apply)',
+                    margin: [0, 10, 0, 0]
+                },
+                {
+                    margin: [0, 5, 0, 0],
+                    type: 'none',
+                    ul: [
+                        { text: [checkedIcon, " Revoked driver's license"] },
+                        { text: [unCheckedIcon, " Suspended driver's license"] },
+                        { text: [unCheckedIcon, " Plead guilty to or been convicted of reckless driving"] },
+                        { text: [unCheckedIcon, " Plead guilty to or convicted of driving while intoxicated with drugs or alcohol"] },
+                        { text: [unCheckedIcon, " Plead guilty to or convicted of driving under the influence of any drug or alcohol"] },
+                        { text: [unCheckedIcon, " None of the above"] },
+                    ]
+                }
+            ],
+            [
+                {
+                    text: ['In the last 5 years, have you been diagnosed or treated by a medical professional for any of the following?', { text: '(Select all that apply)', italics: true }],
+                    margin: [0, 10, 0, 0]
+                },
+                {
+                    margin: [0, 5, 0, 0],
+                    type: 'none',
+                    ul: [
+                        { text: [unCheckedIcon, " Amyotrophic Lateral Sclerosis (ALS)"] },
+                        { text: [checkedIcon, " Parkinson’s Disease "] },
+                        { text: [unCheckedIcon, " Multiple Sclerosis"] },
+                        { text: [unCheckedIcon, " Muscular Dystrophy"] },
+                        { text: [unCheckedIcon, " Alzheimer’s disease"] },
+                        { text: [unCheckedIcon, " Dementia"] },
+                        { text: [unCheckedIcon, " None of the above"] }
+                    ]
+                }
+            ],
         ],
         colSpan: 2,
     }],
@@ -167,11 +173,6 @@ const content = [
     }
 ];
 
-// Define number of pages and duplicate data
-const numPages = 20;
-const repeatedContent = Array(numPages).fill(content);
-
-
 export const docDefinition: TDocumentDefinitions = {
     footer: (currentPage, pageCount) => ({
         margin: [38, 4, 38, 0],
@@ -183,6 +184,7 @@ export const docDefinition: TDocumentDefinitions = {
     }),
     content: [
         {
+            // Header
             margin: [0, 0, 0, 5],
             columns: [
                 {
@@ -253,11 +255,7 @@ export const docDefinition: TDocumentDefinitions = {
                 { text: 'and this should be after the blank line.' },
             ],
             margin: [0, 0, 0, 10] // Add bottom margin to create space between text
-        },
-        ...repeatedContent.flatMap(pageContent => [
-            // { text: 'Header', fontSize: 24, margin: [0, 0, 0, 20] }, // Example header on each page
-            ...pageContent
-        ])
+        }
     ],
     defaultStyle: {
         // font: 'Tahoma',

@@ -1,6 +1,9 @@
 import { getPdfDoc } from "./pdfmake";
 import { getPdfLibDoc } from "./pdflib";
 import { getJSPdfDoc } from "./jspdf";
+import nationwideJSON from './data/nationwide_input.json'
+import { createPdf } from "./inputJsonToPdf/generatePdf";
+import { InputJSONType } from "./inputJsonToPdf/types";
 
 
 // Import necessary modules
@@ -18,6 +21,21 @@ app.get('/pdfmake', (req, res) => {
 
     // Create a PDF
     const pdfDoc = getPdfDoc();
+
+    // Make sure the browser knows this is a PDF.
+    res.set('Content-Type', 'application/pdf');
+    res.set('Content-Disposition', `attachment; filename=sample.pdf`);
+    res.set('Content-Description: File Transfer');
+    res.set('Cache-Control: no-cache');
+
+    pdfDoc.pipe(res);
+    pdfDoc.end();
+});
+
+app.get('/inputjson-pdf', (req, res) => {
+
+    // Create a PDF
+    const pdfDoc = createPdf(nationwideJSON as InputJSONType);
 
     // Make sure the browser knows this is a PDF.
     res.set('Content-Type', 'application/pdf');

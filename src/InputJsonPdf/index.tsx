@@ -1,18 +1,17 @@
 import { useEffect, useState } from "react";
 import { API_BASE_URL } from "../constants";
 
-function PdfLib() {
+function InputJsonPdf() {
     const [pdfUrl, setPdfUrl] = useState('');
 
     useEffect(() => {
         // Fetch PDF data from the server
-        fetch(`${API_BASE_URL}/pdflib`)
-            .then(response => {
-                console.log(response)
-                return response.blob()})
+        fetch(`${API_BASE_URL}/inputjson-pdf`)
+            .then(response => response.blob())
             .then(blob => {
                 // Create a URL for the blob data
                 const url = URL.createObjectURL(blob);
+                console.log(url)
                 // Set the PDF URL in the state
                 setPdfUrl(url);
             })
@@ -23,9 +22,9 @@ function PdfLib() {
 
 
     return (<div style={{ height: '80vh' }}>
-        <h3>PDF make preview</h3>
+        <h3>InputJSON to PDF preview</h3>
         <iframe src={pdfUrl} width={"100%"} height={"100%"} />
     </div>)
 }
 
-export default PdfLib;
+export default InputJsonPdf;
