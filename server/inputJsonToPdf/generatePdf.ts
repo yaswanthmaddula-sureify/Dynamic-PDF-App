@@ -64,16 +64,26 @@ const getIsOptionsSelected = (question: IQuestionRaw, option: ResponseOptionType
         return userResponse.id === option.id;
     }
 
-    return false
+    return false;
 }
 
-// will return the cell based on question type.
+/**
+ * Retrieves the table cells for a given question.
+ * 
+ * @param question - The question object.
+ * @param index - The index of the question (optional) for beneficiary/list type questions.
+ * @returns An array of table cells or null if the question is not applicable.
+ */
 const getQuestionCell = (question: IQuestionRaw, index: number | undefined = undefined): TableCell[] | null => {
 
     switch (question.question_type) {
         case QuestionTypeEnum.text:
         case QuestionTypeEnum.number:
         case QuestionTypeEnum.date:
+            // Ignore empty responses
+            if (!Boolean(question.response)) {
+                return null;
+            }
             return [
                 question?.question_text || '',
                 question?.response?.toString() || ''
@@ -93,7 +103,10 @@ const getQuestionCell = (question: IQuestionRaw, index: number | undefined = und
         //     responseText
         // ];
         case QuestionTypeEnum.multiSelect:
-            return renderSingleMultiSelectQnSingleCol(question);
+            // Ignore empty responses
+            if (!Boolean(question.response)) {
+                return null;
+            }
             return [
                 question?.question_text || '',
                 {
@@ -138,39 +151,19 @@ const getQuestionCell = (question: IQuestionRaw, index: number | undefined = und
                         }
                     ))
 
-                    // const listTables: Content[] = question.questions.map((listQns, index) => {
-                    //     const body: TableCell[][] = [
-                    //         [
-                    //             { text: `${question.question_text} ${index + 1}`, colSpan: 2, style: 'tableHeader' },
-                    //             ''
-                    //         ]
-                    //     ];
-
-                    //     const questionCells = getQuestionsCells(listQns as unknown as IQuestionRaw[]);
-
-                    //     body.push(...questionCells);
-
-                    //     return {
-                    //         margin: [0, 0, 0, 20],
-                    //         table: {
-                    //             headerRows: 1,
-                    //             widths: ['*', '*'],
-                    //             body: body
-                    //         },
-                    //         layout: 'filledHeaderWithBorders'
-                    //     }
-                    // })
-
                     return [{
                         stack: nestedTables,
                         colSpan: 2
                     }, '']
 
                 case DisplayTypeEnum.accordion:
-
                 case DisplayTypeEnum.address_group:
 
                 default:
+                    // Ignore empty responses
+                    if (!Boolean(question.response)) {
+                        return null;
+                    }
                     return [
                         { text: question.question_text, colSpan: 2, style: 'tableHeader' },
                         ''
@@ -260,7 +253,7 @@ const getGroupsContent = (groups: IQuestionRaw[]): Content[] => {
  * @param inputJson The input JSON data.
  * @returns The content for the PDF.
  */
-const createContent = (inputJson: InputJSONType): Content => {
+const createContent = (inputJson: InputJSONType): Content[] => {
 
     const breadcrumbs = inputJson.data.questionnaire.questions;
 
@@ -283,9 +276,9 @@ const createContent = (inputJson: InputJSONType): Content => {
  * @param inputJson - The input JSON data.
  * @returns The document definition object.
  */
-const getDocDefinition = (inputJson: InputJSONType): TDocumentDefinitions => {
+const getDocDefinition = (inputJson: InputJSONType, customDocContent: Content[] = []): TDocumentDefinitions => {
     return {
-        content: createContent(inputJson),
+        content: [...createContent(inputJson), ...customDocContent],
         footer: createFooter('ICC24-LAAA-0138', '(01/2024)'),
         defaultStyle: {
             // font: 'Tahoma',
@@ -306,7 +299,7 @@ const getDocDefinition = (inputJson: InputJSONType): TDocumentDefinitions => {
  * @param inputJson The input JSON data.
  * @returns The PDF document.
  */
-export function createPdf(inputJson: InputJSONType) {
+export function createPdf(inputJson: InputJSONType, customDocContent: Content[] = []) {
 
     // Define font files
     const fonts = {
@@ -332,7 +325,7 @@ export function createPdf(inputJson: InputJSONType) {
 
     const pdfPrinter = new PdfPrinter(fonts);
 
-    const docDefinition = getDocDefinition(inputJson);
+    const docDefinition = getDocDefinition(inputJson, customDocContent);
 
     // Create a PDF
     return pdfPrinter.createPdfKitDocument(docDefinition, { tableLayouts: customTableLayouts });
