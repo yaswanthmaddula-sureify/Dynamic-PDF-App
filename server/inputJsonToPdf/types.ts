@@ -269,3 +269,8 @@ export type InputJSONType = {
   },
   breadcrumbs: Breadcrumbs[]
 };
+
+export enum LayoutType {
+  single = 'single',
+  double = 'double'
+}

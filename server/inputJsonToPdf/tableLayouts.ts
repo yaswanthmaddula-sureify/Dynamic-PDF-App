@@ -16,5 +16,13 @@ export const customTableLayouts = {
         paddingRight: (i: number, node: any) => i == 0 ? 4 : 0,
         // paddingTop: () => 0,
         // paddingBottom: () => 0
-    }
+    },
+    filledHeaderWithOuterBorders:
+    {
+        hLineWidth: (i: number, node: any) => i === 0 || i === node.table.body.length ? 1 : 0,
+        vLineWidth: (i: number, node: any) => i === 0 || i === node.table.widths.length ? 1 : 0,
+        hLineColor: () => '#cccccc',
+        vLineColor: () => '#cccccc',
+        fillColor: (rowIndex, node, columnIndex) => rowIndex < node.table.headerRows ? '#cccccc' : null
+    },
 }

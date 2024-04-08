@@ -1,9 +1,13 @@
 import PdfPrinter from "pdfmake";
 import { customTableLayouts } from "./tableLayouts";
 import { Content, DynamicContent, TDocumentDefinitions, TableCell } from "pdfmake/interfaces";
-import { DisplayTypeEnum, IQuestionRaw, InputJSONType, QuestionTypeEnum, ResponseOptionType } from "./types";
+import { DisplayTypeEnum, IQuestionRaw, InputJSONType, LayoutType, QuestionTypeEnum, ResponseOptionType } from "./types";
 import { checkedIcon, unCheckedIcon } from "./fontelloIcons";
 import { mapOnlySelectedOptions, renderSingleMultiSelectQnSingleCol } from "./questionLayout";
+
+const TABLE_LAYOUT: LayoutType = LayoutType.single as LayoutType;
+
+
 
 /**
  * Creates the header configuration for the PDF document.
@@ -49,6 +53,12 @@ const createFooter = (leftText = 'ICC24-LAAA-0138', rightText = '(01/2024)'): Co
     });
 }
 
+/**
+ * Checks if the given option is selected in the user's response to a question.
+ * @param question - The question object.
+ * @param option - The option to check.
+ * @returns True if the option is selected, false otherwise.
+ */
 const getIsOptionsSelected = (question: IQuestionRaw, option: ResponseOptionType): boolean => {
     const userResponse = question.response;
 
@@ -72,9 +82,10 @@ const getIsOptionsSelected = (question: IQuestionRaw, option: ResponseOptionType
  * 
  * @param question - The question object.
  * @param index - The index of the question (optional) for beneficiary/list type questions.
+ * @param arrIndex - The index of the question in the array.
  * @returns An array of table cells or null if the question is not applicable.
  */
-const getQuestionCell = (question: IQuestionRaw, index: number | undefined = undefined): TableCell[] | null => {
+const getQuestionCell = (question: IQuestionRaw, index: number | undefined = undefined, arrIndex?: number): TableCell[] | null => {
 
     switch (question.question_type) {
         case QuestionTypeEnum.text:
@@ -179,11 +190,129 @@ const getQuestionCell = (question: IQuestionRaw, index: number | undefined = und
     }
 }
 
-const getQuestionsCells = (questions: IQuestionRaw[]): TableCell[][] => {
+/**
+ * Generates an array of single column table cells based on the given question.
+ * 
+ * @param question - The question object.
+ * @param index - The index of the question.
+ * @param arrIndex - The index of the question in the array.
+ * @returns An array of table cells or null if the question is not applicable.
+ */
+const getQuestionCellSingle = (question: IQuestionRaw, index: number | undefined = undefined, arrIndex?: number): TableCell[] | null => {
+
+    switch (question.question_type) {
+        case QuestionTypeEnum.text:
+        case QuestionTypeEnum.number:
+        case QuestionTypeEnum.date:
+            // Ignore empty responses
+            if (!Boolean(question.response)) {
+                return null;
+            }
+            return [{
+                margin: [0, 5, 0, 0],
+                stack: [
+                    `${(arrIndex ?? 0) + 1}) ${question?.question_text || ''}`,
+                    {
+                        type: 'none',
+                        ul: [
+                            question?.response?.toString() || ''
+                        ]
+                    }
+                ]
+            }];
+
+        case QuestionTypeEnum.singleSelect:
+        case QuestionTypeEnum.multiSelect:
+            // Ignore empty responses
+            if (!Boolean(question.response)) {
+                return null;
+            }
+            return [{
+                margin: [0, 5, 0, 0],
+                stack: [
+                    `${(arrIndex ?? 0) + 1}) ${question?.question_text || ''}`,
+                    {
+                        margin: [0, 5, 0, 0],
+                        type: 'none',
+                        ul: question.response_options.map(option => {
+                            const isSelected = getIsOptionsSelected(question, option);
+
+                            const icon = isSelected ? checkedIcon : unCheckedIcon;
+
+                            return { margin: [0, 5, 0, 0], text: [icon, ` ${option.label}   `], noWrap: false }
+                        })
+                    }
+                ]
+            }]
+
+        case QuestionTypeEnum.label:
+        case QuestionTypeEnum.button:
+            return null;
+
+        case QuestionTypeEnum.group:
+            switch (question.display_type) {
+                case DisplayTypeEnum.questions_group:
+                case DisplayTypeEnum.beneficiary_list:
+                    const label = index ? `${question.question_text} ${index}` : question.question_text;
+                    return [
+                        { text: label, style: 'tableHeader' }
+                    ]
+
+                case DisplayTypeEnum.list:
+                    const listQuestions = (question.questions || []) as unknown as IQuestionRaw[][];
+                    const nestedTables = listQuestions.map(listChildQns => (
+                        {
+                            // Nested table definition
+                            table: {
+                                widths: ['*', '*'],
+                                body: [
+                                    [`${question.question_text}`, ''],
+                                    ...getQuestionsCells(listChildQns)
+                                ]
+                            },
+                            layout: 'vLineTableLayout',
+                        }
+                    ))
+
+                    return [{
+                        stack: nestedTables
+                    }]
+
+                case DisplayTypeEnum.accordion:
+                case DisplayTypeEnum.address_group:
+
+                default:
+                    // Ignore empty responses
+                    if (!Boolean(question.response)) {
+                        return null;
+                    }
+                    return [
+                        { text: question.question_text, style: 'tableHeader' }
+                    ]
+            }
+
+        default:
+            console.log('I am the defaulter', question);
+            return [
+                `I am the defaulter`
+            ]
+    }
+}
+
+/**
+ * Retrieves the table cells for the given questions and layout type.
+ * 
+ * @param questions - The array of questions.
+ * @param layout - The layout type (default: LayoutType.double).
+ * @returns An array of table cells.
+ */
+const getQuestionsCells = (questions: IQuestionRaw[], layout: LayoutType = LayoutType.double): TableCell[][] => {
     const questionCells: TableCell[][] = [];
 
-    questions.forEach(question => {
-        const cell = getQuestionCell(question);
+    const getTableRow = layout === LayoutType.single ? getQuestionCellSingle : getQuestionCell;
+
+    questions.forEach((question, arrIndex) => {
+        const cell = getTableRow(question, undefined, arrIndex);
 
         if (cell) {
             questionCells.push(cell);
@@ -192,7 +321,7 @@ const getQuestionsCells = (questions: IQuestionRaw[]): TableCell[][] => {
         const nestedQuestions = question.questions || [];
 
         if (nestedQuestions.length > 0 && question.display_type !== DisplayTypeEnum.list) {
-            const nestedCells = getQuestionsCells(nestedQuestions);
+            const nestedCells = getQuestionsCells(nestedQuestions, layout);
             questionCells.push(...nestedCells);
         }
     })
@@ -200,51 +329,63 @@ const getQuestionsCells = (questions: IQuestionRaw[]): TableCell[][] => {
     return questionCells;
 }
 
+/**
+ * Generates a group table with the given body and layout.
+ * @param body - The table cells to be included in the table body.
+ * @param layout - The layout type of the table. Defaults to LayoutType.double.
+ * @returns The generated group table content.
+ */
+const getGroupTable = (body: TableCell[][], layout: LayoutType = LayoutType.double): Content => {
+    return {
+        margin: [0, 0, 0, 20],
+        table: {
+            headerRows: 1,
+            widths: layout === 'single' ? ['*'] : ['*', '*'],
+            body: body
+        },
+        layout: layout === 'single' ? 'filledHeaderWithOuterBorders' : 'filledHeaderWithBorders'
+    }
+}
+
+/**
+ * Retrieves the content for groups in a PDF document.
+ * 
+ * @param groups - An array of raw question objects representing groups.
+ * @returns An array of Content objects representing the groups' content in the PDF document.
+ */
 const getGroupsContent = (groups: IQuestionRaw[]): Content[] => {
+
+    const getTableRow = TABLE_LAYOUT == LayoutType.single ? getQuestionCellSingle : getQuestionCell;
+
     return groups.reduce((prevContent, group) => {
         const questions = group.questions || [];
 
         if (questions[0].display_type === DisplayTypeEnum.beneficiary_list) {
             const beneficiaryTables: Content[] = questions[0].questions.map((beneficiaryQns, index) => {
                 const body: TableCell[][] = [
-                    getQuestionCell(questions[0], index + 1) || ['', '']
+                    getTableRow(questions[0], index + 1) || ['', '']
                 ];
-
-                const questionCells = getQuestionsCells(beneficiaryQns as unknown as IQuestionRaw[]);
+                const questionCells = getQuestionsCells(beneficiaryQns as unknown as IQuestionRaw[], TABLE_LAYOUT);
 
                 body.push(...questionCells);
 
-                return {
-                    margin: [0, 0, 0, 20],
-                    table: {
-                        headerRows: 1,
-                        widths: ['*', '*'],
-                        body: body
-                    },
-                    layout: 'filledHeaderWithBorders'
-                }
+                return getGroupTable(body, TABLE_LAYOUT);
             })
+
+
 
             return [...prevContent, ...beneficiaryTables];
         }
 
         const body: TableCell[][] = [
-            getQuestionCell(group) || ['', '']
+            getTableRow(group) || ['']
         ];
 
-        const questionCells = getQuestionsCells(questions);
+        const questionCells = getQuestionsCells(questions, TABLE_LAYOUT);
 
         body.push(...questionCells);
 
-        return [...prevContent, {
-            margin: [0, 0, 0, 20],
-            table: {
-                headerRows: 1,
-                widths: ['*', '*'],
-                body: body
-            },
-            layout: 'filledHeaderWithBorders'
-        }]
+        return [...prevContent, getGroupTable(body, TABLE_LAYOUT)]
     }, [] as Content[])
 }
 
