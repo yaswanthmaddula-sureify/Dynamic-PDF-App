@@ -1,11 +1,9 @@
 import PdfPrinter from "pdfmake";
 import { customTableLayouts } from "./tableLayouts";
 import { Content, DynamicContent, TDocumentDefinitions, TableCell } from "pdfmake/interfaces";
-import { DisplayTypeEnum, IQuestionRaw, InputJSONType, LayoutType, QuestionTypeEnum, ResponseOptionType } from "./types";
-import { autoLayoutSinlgeMultiSelectQn, getTwoColumnSingleMultiSelectQnCell, renderSingleMultiSelectQnSingleCol } from "./questionLayout";
-
-const TABLE_LAYOUT: LayoutType = LayoutType.double as LayoutType;
-const AUTO_LAYOUT = false;
+import { DisplayTypeEnum, IQuestionRaw, InputJSONType, LayoutType } from "./types";
+import { getQuestionRow, getRowsOfQuestions } from "./questionLayout";
+import { TABLE_LAYOUT } from "./constants";
 
 /**
  * Creates the header configuration for the PDF document.
@@ -52,225 +50,6 @@ const createFooter = (leftText = 'ICC24-LAAA-0138', rightText = '(01/2024)'): Co
 }
 
 /**
- * Retrieves the table cells for a given question.
- * 
- * @param question - The question object.
- * @param index - The index of the question (optional) for beneficiary/list type questions.
- * @param arrIndex - The index of the question in the array.
- * @returns An array of table cells or null if the question is not applicable.
- */
-const getQuestionCell = (question: IQuestionRaw, index: number | undefined = undefined, arrIndex?: number): TableCell[] | null => {
-
-    switch (question.question_type) {
-        case QuestionTypeEnum.text:
-        case QuestionTypeEnum.number:
-        case QuestionTypeEnum.date:
-            // Ignore empty responses
-            if (!Boolean(question.response)) {
-                return null;
-            }
-            return [
-                question?.question_text || '',
-                question?.response?.toString() || ''
-            ];
-
-        case QuestionTypeEnum.singleSelect:
-        case QuestionTypeEnum.multiSelect:
-            // Ignore empty responses
-            if (!Boolean(question.response)) {
-                return null;
-            }
-
-            if (AUTO_LAYOUT) {
-                return autoLayoutSinlgeMultiSelectQn(question);
-            }
-
-            return getTwoColumnSingleMultiSelectQnCell(question);
-
-
-        case QuestionTypeEnum.label:
-        case QuestionTypeEnum.button:
-            return null;
-
-        case QuestionTypeEnum.group:
-            switch (question.display_type) {
-                case DisplayTypeEnum.questions_group:
-                case DisplayTypeEnum.beneficiary_list:
-                    const label = index ? `${question.question_text} ${index}` : question.question_text;
-                    return [
-                        { text: label, colSpan: 2, style: 'tableHeader' },
-                        ''
-                    ]
-
-                case DisplayTypeEnum.list:
-                    const listQuestions = (question.questions || []) as unknown as IQuestionRaw[][];
-                    const nestedTables = listQuestions.map(listChildQns => (
-                        {
-                            // Nested table definition
-                            table: {
-                                widths: ['*', '*'],
-                                body: [
-                                    [`${question.question_text}`, ''],
-                                    ...getQuestionsCells(listChildQns)
-                                ]
-                            },
-                            layout: 'vLineTableLayout',
-                            colSpan: 2 // Span the nested table across both columns
-                        }
-                    ))
-
-                    return [{
-                        stack: nestedTables,
-                        colSpan: 2
-                    }, '']
-
-                case DisplayTypeEnum.accordion:
-                case DisplayTypeEnum.address_group:
-
-                default:
-                    // Ignore empty responses
-                    if (!Boolean(question.response)) {
-                        return null;
-                    }
-                    return [
-                        { text: question.question_text, colSpan: 2, style: 'tableHeader' },
-                        ''
-                    ]
-            }
-
-        default:
-            console.log('I am the defaulter', question);
-            return [
-                `I am the defaulter`,
-                question?.response?.toString() || ''
-            ]
-    }
-}
-
-/**
- * Generates an array of single column table cells based on the given question.
- * 
- * @param question - The question object.
- * @param index - The index of the question.
- * @param arrIndex - The index of the question in the array.
- * @returns An array of table cells or null if the question is not applicable.
- */
-const getQuestionCellSingle = (question: IQuestionRaw, index: number | undefined = undefined, arrIndex?: number): TableCell[] | null => {
-
-    switch (question.question_type) {
-        case QuestionTypeEnum.text:
-        case QuestionTypeEnum.number:
-        case QuestionTypeEnum.date:
-            // Ignore empty responses
-            if (!Boolean(question.response)) {
-                return null;
-            }
-            return [{
-                margin: [0, 5, 0, 0],
-                stack: [
-                    `${(arrIndex ?? 0) + 1}) ${question?.question_text || ''}`,
-                    {
-                        type: 'none',
-                        ul: [
-                            question?.response?.toString() || ''
-                        ]
-                    }
-                ]
-            }];
-
-        case QuestionTypeEnum.singleSelect:
-        case QuestionTypeEnum.multiSelect:
-            // Ignore empty responses
-            if (!Boolean(question.response)) {
-                return null;
-            }
-            return renderSingleMultiSelectQnSingleCol(question, TABLE_LAYOUT, arrIndex);
-
-        case QuestionTypeEnum.label:
-        case QuestionTypeEnum.button:
-            return null;
-
-        case QuestionTypeEnum.group:
-            switch (question.display_type) {
-                case DisplayTypeEnum.questions_group:
-                case DisplayTypeEnum.beneficiary_list:
-                    const label = index ? `${question.question_text} ${index}` : question.question_text;
-                    return [
-                        { text: label, style: 'tableHeader' }
-                    ]
-
-                case DisplayTypeEnum.list:
-                    const listQuestions = (question.questions || []) as unknown as IQuestionRaw[][];
-                    const nestedTables = listQuestions.map(listChildQns => (
-                        {
-                            // Nested table definition
-                            table: {
-                                widths: ['*', '*'],
-                                body: [
-                                    [`${question.question_text}`, ''],
-                                    ...getQuestionsCells(listChildQns)
-                                ]
-                            },
-                            layout: 'vLineTableLayout',
-                        }
-                    ))
-
-                    return [{
-                        stack: nestedTables
-                    }]
-
-                case DisplayTypeEnum.accordion:
-                case DisplayTypeEnum.address_group:
-
-                default:
-                    // Ignore empty responses
-                    if (!Boolean(question.response)) {
-                        return null;
-                    }
-                    return [
-                        { text: question.question_text, style: 'tableHeader' }
-                    ]
-            }
-
-        default:
-            console.log('I am the defaulter', question);
-            return [
-                `I am the defaulter`
-            ]
-    }
-}
-
-/**
- * Retrieves the table cells for the given questions and layout type.
- * 
- * @param questions - The array of questions.
- * @param layout - The layout type (default: LayoutType.double).
- * @returns An array of table cells.
- */
-const getQuestionsCells = (questions: IQuestionRaw[], layout: LayoutType = LayoutType.double): TableCell[][] => {
-    const questionCells: TableCell[][] = [];
-
-    const getTableRow = layout === LayoutType.single ? getQuestionCellSingle : getQuestionCell;
-
-    questions.forEach((question, arrIndex) => {
-        const cell = getTableRow(question, undefined, arrIndex);
-
-        if (cell) {
-            questionCells.push(cell);
-        }
-
-        const nestedQuestions = question.questions || [];
-
-        if (nestedQuestions.length > 0 && question.display_type !== DisplayTypeEnum.list) {
-            const nestedCells = getQuestionsCells(nestedQuestions, layout);
-            questionCells.push(...nestedCells);
-        }
-    })
-
-    return questionCells;
-}
-
-/**
  * Generates a group table with the given body and layout.
  * @param body - The table cells to be included in the table body.
  * @param layout - The layout type of the table. Defaults to LayoutType.double.
@@ -296,17 +75,15 @@ const getGroupTable = (body: TableCell[][], layout: LayoutType = LayoutType.doub
  */
 const getGroupsContent = (groups: IQuestionRaw[]): Content[] => {
 
-    const getTableRow = TABLE_LAYOUT == LayoutType.single ? getQuestionCellSingle : getQuestionCell;
-
     return groups.reduce((prevContent, group) => {
         const questions = group.questions || [];
 
         if (questions[0].display_type === DisplayTypeEnum.beneficiary_list) {
-            const beneficiaryTables: Content[] = questions[0].questions.map((beneficiaryQns, index) => {
+            const beneficiaryTables: Content[] = questions[0].questions.map((beneficiaryQns, listIndex) => {
                 const body: TableCell[][] = [
-                    getTableRow(questions[0], index + 1) || ['', '']
+                    getQuestionRow(questions[0], TABLE_LAYOUT, 0, listIndex) || ['', '']
                 ];
-                const questionCells = getQuestionsCells(beneficiaryQns as unknown as IQuestionRaw[], TABLE_LAYOUT);
+                const questionCells = getRowsOfQuestions(beneficiaryQns as unknown as IQuestionRaw[], TABLE_LAYOUT);
 
                 body.push(...questionCells);
 
@@ -319,10 +96,10 @@ const getGroupsContent = (groups: IQuestionRaw[]): Content[] => {
         }
 
         const body: TableCell[][] = [
-            getTableRow(group) || ['']
+            getQuestionRow(group, TABLE_LAYOUT) || ['']
         ];
 
-        const questionCells = getQuestionsCells(questions, TABLE_LAYOUT);
+        const questionCells = getRowsOfQuestions(questions, TABLE_LAYOUT);
 
         body.push(...questionCells);
 
