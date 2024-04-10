@@ -1,0 +1,1 @@
+export { getGroupsContent } from './groups';
