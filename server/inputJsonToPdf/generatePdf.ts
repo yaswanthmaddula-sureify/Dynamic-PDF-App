@@ -60,10 +60,10 @@ const getGroupTable = (body: TableCell[][], layout: LayoutType = LayoutType.doub
         margin: [0, 0, 0, 20],
         table: {
             headerRows: 1,
-            widths: layout === 'single' ? ['*'] : ['*', '*'],
+            widths: layout === LayoutType.single ? ['*'] : ['*', '*'],
             body: body
         },
-        layout: layout === 'single' ? 'filledHeaderWithOuterBorders' : 'filledHeaderWithBorders'
+        layout: layout === LayoutType.single ? 'filledHeaderWithOuterBorders' : 'filledHeaderWithBorders'
     }
 }
 

@@ -160,7 +160,7 @@ export const autoLayoutSinlgeMultiSelectQn = (question: IQuestionRaw): TableCell
  * @param listIndex - The index of the question (optional) for beneficiary/list type questions.
  * @returns An array of table cells or null if the question is not applicable.
  */
-export const getQnDoubleColRow= (question: IQuestionRaw, arrIndex?: number, listIndex?: number): TableCell[] | null => {
+export const getQnDoubleColRow = (question: IQuestionRaw, arrIndex?: number, listIndex?: number): TableCell[] | null => {
 
     switch (question.question_type) {
         case QuestionTypeEnum.text:
@@ -349,14 +349,14 @@ export const getQnSingleColRow = (question: IQuestionRaw, arrIndex?: number, lis
  * @param listIndex - The list index (optional).
  * @returns An array of table cells representing the question row.
  */
-export const getQuestionRow = (question: IQuestionRaw, layout: LayoutType = LayoutType.double, arrIndex?: number, listIndex?: number): TableCell[] => {
+export const getQuestionRow = (question: IQuestionRaw, layout: LayoutType = LayoutType.double, arrIndex?: number, listIndex?: number): TableCell[] | null => {
     switch (layout) {
         case LayoutType.single:
-            return getQnSingleColRow(question, arrIndex, listIndex) || ['', ''];
+            return getQnSingleColRow(question, arrIndex, listIndex);
 
         case LayoutType.double:
         default:
-            return getQnDoubleColRow(question, arrIndex, listIndex) || ['', ''];
+            return getQnDoubleColRow(question, arrIndex, listIndex);
     }
 }
 
